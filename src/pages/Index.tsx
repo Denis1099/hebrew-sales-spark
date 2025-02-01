@@ -3,6 +3,7 @@ import { ConsultationForm } from "@/components/ConsultationForm";
 import { FeatureCard } from "@/components/FeatureCard";
 import { TestimonialCard } from "@/components/TestimonialCard";
 import Navbar from "@/components/Navbar";
+import ResultsSection from "@/components/ResultsSection";
 
 const Index = () => {
   return (
@@ -13,7 +14,7 @@ const Index = () => {
       <section className="pt-32 pb-20">
         <div className="container mx-auto px-4 grid md:grid-cols-2 gap-12 items-center">
           <div className="text-right">
-            <h1 className="text-4xl md:text-5xl font-bold mb-6 text-textDark">
+            <h1 className="text-4xl md:text-5xl font-playfair font-bold mb-6 text-textDark">
               הגדל את המכירות שלך
               <br />
               <span className="text-primary">עם אימון מכירות מקצועי</span>
@@ -30,6 +31,9 @@ const Index = () => {
           </div>
         </div>
       </section>
+
+      {/* Results Section */}
+      <ResultsSection />
 
       {/* Features Section */}
       <section className="py-20">
