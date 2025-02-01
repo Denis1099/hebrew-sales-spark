@@ -8,9 +8,11 @@ import ResultsSection from "@/components/ResultsSection";
 const Index = () => {
   return (
     <div className="min-h-screen bg-gradient-to-b from-white to-secondary/10 font-heebo" dir="rtl">
-      <div className="fixed inset-0 -z-10">
-        <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-primary/20 rounded-full blur-3xl" />
-        <div className="absolute bottom-0 left-0 w-[500px] h-[500px] bg-secondary/30 rounded-full blur-3xl" />
+      {/* Background Effects */}
+      <div className="fixed inset-0 -z-10 overflow-hidden">
+        <div className="absolute top-0 right-0 w-[600px] h-[600px] bg-primary/20 rounded-full blur-3xl" />
+        <div className="absolute top-[30%] left-0 w-[500px] h-[500px] bg-secondary/40 rounded-full blur-3xl" />
+        <div className="absolute bottom-0 right-[20%] w-[700px] h-[700px] bg-accent/20 rounded-full blur-3xl" />
       </div>
       
       <Navbar />
@@ -28,11 +30,13 @@ const Index = () => {
               למד טכניקות מכירה מוכחות ושפר את הביצועים שלך עם תוכנית אימון אישית
             </p>
           </div>
-          <div className="bg-white/80 backdrop-blur-sm p-8 rounded-2xl shadow-xl">
-            <h2 className="text-2xl font-bold mb-6 text-center text-primary">
-              קבע שיחת ייעוץ חינם
-            </h2>
-            <ConsultationForm isCompact />
+          <div className="relative">
+            <img
+              src="https://images.unsplash.com/photo-1519389950473-47ba0277781c"
+              alt="Business Meeting"
+              className="rounded-2xl shadow-2xl"
+            />
+            <div className="absolute inset-0 bg-primary/10 rounded-2xl backdrop-blur-sm" />
           </div>
         </div>
       </section>
@@ -42,7 +46,8 @@ const Index = () => {
 
       {/* Features Section */}
       <section className="py-20 relative">
-        <div className="container mx-auto px-4">
+        <div className="absolute inset-0 bg-white/40 backdrop-blur-md" />
+        <div className="container mx-auto px-4 relative">
           <h2 className="text-3xl font-playfair font-bold text-center mb-12 text-primary">
             איך נעזור לך להצליח
           </h2>
@@ -72,8 +77,9 @@ const Index = () => {
       </section>
 
       {/* Testimonials Section */}
-      <section className="py-20 bg-white/50 backdrop-blur-sm">
-        <div className="container mx-auto px-4">
+      <section className="py-20 relative">
+        <div className="absolute inset-0 bg-secondary/60 backdrop-blur-lg" />
+        <div className="container mx-auto px-4 relative">
           <h2 className="text-3xl font-playfair font-bold text-center mb-12 text-primary">
             מה הלקוחות אומרים
           </h2>
@@ -101,8 +107,9 @@ const Index = () => {
       </section>
 
       {/* Full Consultation Form Section */}
-      <section className="py-20">
-        <div className="container mx-auto px-4 max-w-2xl">
+      <section className="py-20 relative">
+        <div className="absolute inset-0 bg-primary/5 backdrop-blur-xl" />
+        <div className="container mx-auto px-4 max-w-2xl relative">
           <h2 className="text-3xl font-playfair font-bold text-center mb-12 text-primary">
             מוכן להתחיל? צור קשר עכשיו
           </h2>

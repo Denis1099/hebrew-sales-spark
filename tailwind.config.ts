@@ -19,9 +19,9 @@ export default {
     },
     extend: {
       colors: {
-        primary: "#4ade80", // Light green for money theme
-        accent: "#22c55e", // Darker green for contrast
-        secondary: "#bbf7d0", // Very light green
+        primary: "#355E3B", // New main green color
+        accent: "#2A4A2F", // Darker shade for contrast
+        secondary: "#E8F5E9", // Light shade for backgrounds
         neutral: "#8E9196",
         success: "#48BB78",
         textDark: "#1A202C",
