@@ -2,25 +2,28 @@ import { Target, TrendingUp, Users, BarChart } from "lucide-react";
 import { ConsultationForm } from "@/components/ConsultationForm";
 import { FeatureCard } from "@/components/FeatureCard";
 import { TestimonialCard } from "@/components/TestimonialCard";
+import Navbar from "@/components/Navbar";
 
 const Index = () => {
   return (
-    <div className="min-h-screen bg-secondary font-heebo" dir="rtl">
+    <div className="min-h-screen bg-gradient-to-b from-white to-secondary/10 font-heebo" dir="rtl">
+      <Navbar />
+      
       {/* Hero Section */}
-      <section className="bg-white py-20">
+      <section className="pt-32 pb-20">
         <div className="container mx-auto px-4 grid md:grid-cols-2 gap-12 items-center">
           <div className="text-right">
-            <h1 className="text-4xl md:text-5xl font-bold mb-6 text-primary">
+            <h1 className="text-4xl md:text-5xl font-bold mb-6 text-textDark">
               הגדל את המכירות שלך
               <br />
-              <span className="text-accent">עם אימון מכירות מקצועי</span>
+              <span className="text-primary">עם אימון מכירות מקצועי</span>
             </h1>
             <p className="text-xl text-gray-600 mb-8">
               למד טכניקות מכירה מוכחות ושפר את הביצועים שלך עם תוכנית אימון אישית
             </p>
           </div>
-          <div className="bg-white p-8 rounded-lg shadow-lg">
-            <h2 className="text-2xl font-bold mb-6 text-center">
+          <div className="bg-white/80 backdrop-blur-sm p-8 rounded-2xl shadow-xl">
+            <h2 className="text-2xl font-bold mb-6 text-center text-primary">
               קבע שיחת ייעוץ חינם
             </h2>
             <ConsultationForm isCompact />
@@ -31,7 +34,7 @@ const Index = () => {
       {/* Features Section */}
       <section className="py-20">
         <div className="container mx-auto px-4">
-          <h2 className="text-3xl font-bold text-center mb-12">
+          <h2 className="text-3xl font-bold text-center mb-12 text-primary">
             איך נעזור לך להצליח
           </h2>
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
@@ -60,9 +63,9 @@ const Index = () => {
       </section>
 
       {/* Testimonials Section */}
-      <section className="bg-white py-20">
+      <section className="py-20 bg-white/50 backdrop-blur-sm">
         <div className="container mx-auto px-4">
-          <h2 className="text-3xl font-bold text-center mb-12">
+          <h2 className="text-3xl font-bold text-center mb-12 text-primary">
             מה הלקוחות אומרים
           </h2>
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -91,10 +94,10 @@ const Index = () => {
       {/* Full Consultation Form Section */}
       <section className="py-20">
         <div className="container mx-auto px-4 max-w-2xl">
-          <h2 className="text-3xl font-bold text-center mb-12">
+          <h2 className="text-3xl font-bold text-center mb-12 text-primary">
             מוכן להתחיל? צור קשר עכשיו
           </h2>
-          <div className="bg-white p-8 rounded-lg shadow-lg">
+          <div className="bg-white/80 backdrop-blur-sm p-8 rounded-2xl shadow-xl">
             <ConsultationForm />
           </div>
         </div>
