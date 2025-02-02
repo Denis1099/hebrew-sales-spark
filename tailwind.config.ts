@@ -19,10 +19,10 @@ export default {
     },
     extend: {
       colors: {
-        primary: "#355E3B", // Main headlines and logo
-        accent: "#008080", // Teal for subheadlines
-        secondary: "#808080", // Gray for CTAs and accents
-        neutral: "#8E9196",
+        primary: "#071330", // Dark Blue for main headlines
+        accent: "#392C3D", // Marsala for subheadlines
+        secondary: "#394B6F", // Cornflower for CTAs
+        neutral: "#CECFD3", // Pewter for subtle elements
         success: "#48BB78",
         textDark: "#1A202C",
         border: "hsl(var(--border))",
@@ -48,7 +48,7 @@ export default {
         },
       },
       fontFamily: {
-        heebo: ["Heebo", "sans-serif"],
+        'open-sans': ['"Open Sans"', 'sans-serif'],
         playfair: ["Playfair Display", "serif"],
       },
       keyframes: {

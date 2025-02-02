@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { Button } from "./ui/button";
 import { Input } from "./ui/input";
+import { Textarea } from "./ui/textarea";
 import { useToast } from "@/hooks/use-toast";
 
 interface ConsultationFormProps {
@@ -11,8 +12,7 @@ export const ConsultationForm = ({ isCompact = false }: ConsultationFormProps) =
   const [formData, setFormData] = useState({
     name: "",
     phone: "",
-    email: "",
-    company: "",
+    about: "",
   });
   const { toast } = useToast();
 
@@ -22,7 +22,7 @@ export const ConsultationForm = ({ isCompact = false }: ConsultationFormProps) =
       title: "!תודה על פנייתך",
       description: ".ניצור איתך קשר בהקדם",
     });
-    setFormData({ name: "", phone: "", email: "", company: "" });
+    setFormData({ name: "", phone: "", about: "" });
   };
 
   return (
@@ -45,25 +45,12 @@ export const ConsultationForm = ({ isCompact = false }: ConsultationFormProps) =
           className="text-right"
         />
         {!isCompact && (
-          <>
-            <Input
-              type="email"
-              placeholder="אימייל"
-              value={formData.email}
-              onChange={(e) => setFormData({ ...formData, email: e.target.value })}
-              required
-              className="text-right"
-            />
-            <Input
-              type="text"
-              placeholder="שם החברה"
-              value={formData.company}
-              onChange={(e) =>
-                setFormData({ ...formData, company: e.target.value })
-              }
-              className="text-right"
-            />
-          </>
+          <Textarea
+            placeholder="קצת על עצמך.."
+            value={formData.about}
+            onChange={(e) => setFormData({ ...formData, about: e.target.value })}
+            className="text-right min-h-[100px]"
+          />
         )}
       </div>
       <Button type="submit" className="w-full bg-secondary hover:bg-secondary/90 text-white font-bold">

@@ -7,7 +7,7 @@ import ResultsSection from "@/components/ResultsSection";
 
 const Index = () => {
   return (
-    <div className="min-h-screen bg-gradient-to-b from-[#F8F8F8] to-white font-heebo" dir="rtl">
+    <div className="min-h-screen bg-gradient-to-b from-[#F8F8F8] to-white font-open-sans" dir="rtl">
       {/* Background Effects */}
       <div className="fixed inset-0 -z-10 overflow-hidden">
         <div className="absolute top-0 right-0 w-[600px] h-[600px] bg-primary/10 rounded-full blur-3xl" />
@@ -20,8 +20,8 @@ const Index = () => {
       {/* Hero Section */}
       <section className="pt-32 pb-20 relative">
         <div className="container mx-auto px-4 grid md:grid-cols-2 gap-12 items-center">
-          <div className="text-right">
-            <h1 className="text-4xl md:text-5xl font-playfair font-bold mb-6 text-primary">
+          <div className="text-right space-y-8">
+            <h1 className="text-4xl md:text-5xl font-bold mb-6 text-primary">
               הגדל את המכירות שלך
               <br />
               <span className="text-accent">עם אימון מכירות מקצועי</span>
@@ -29,6 +29,9 @@ const Index = () => {
             <p className="text-xl text-gray-600 mb-8">
               למד טכניקות מכירה מוכחות ושפר את הביצועים שלך עם תוכנית אימון אישית
             </p>
+            <div className="max-w-md">
+              <ConsultationForm isCompact={true} />
+            </div>
           </div>
           <div className="relative">
             <img
@@ -110,7 +113,7 @@ const Index = () => {
       <section className="py-20 relative">
         <div className="absolute inset-0 bg-[#F8F8F8]/80 backdrop-blur-xl" />
         <div className="container mx-auto px-4 max-w-2xl relative">
-          <h2 className="text-3xl font-playfair font-bold text-center mb-12 text-primary">
+          <h2 className="text-3xl font-bold text-center mb-12 text-primary">
             מוכן להתחיל? צור קשר עכשיו
           </h2>
           <div className="bg-white/80 backdrop-blur-sm p-8 rounded-2xl shadow-xl">
