@@ -19,9 +19,9 @@ export default {
     },
     extend: {
       colors: {
-        primary: "#355E3B", // New main green color
-        accent: "#2A4A2F", // Darker shade for contrast
-        secondary: "#E8F5E9", // Light shade for backgrounds
+        primary: "#355E3B", // Main headlines and logo
+        accent: "#008080", // Teal for subheadlines
+        secondary: "#808080", // Gray for CTAs and accents
         neutral: "#8E9196",
         success: "#48BB78",
         textDark: "#1A202C",

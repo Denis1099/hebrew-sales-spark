@@ -66,7 +66,7 @@ export const ConsultationForm = ({ isCompact = false }: ConsultationFormProps) =
           </>
         )}
       </div>
-      <Button type="submit" className="w-full bg-accent hover:bg-accent/90">
+      <Button type="submit" className="w-full bg-secondary hover:bg-secondary/90 text-white font-bold">
         קבע שיחת ייעוץ
       </Button>
     </form>
