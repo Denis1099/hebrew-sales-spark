@@ -14,7 +14,7 @@ const Index = () => {
   };
 
   return (
-    <div className="min-h-screen bg-background font-open-sans" dir="rtl">
+    <div className="min-h-screen bg-background font-noto" dir="rtl">
       {/* Hero Section */}
       <section className="pt-20 pb-20 relative">
         <div className="container mx-auto px-4">
@@ -51,12 +51,18 @@ const Index = () => {
             </div>
             
             {/* Image Side */}
-            <div className="flex-1 md:w-1/3">
-              <img 
-                src="https://images.unsplash.com/photo-1581092795360-fd1ca04f0952"
-                alt="Professional mentor"
-                className="w-full h-auto rounded-lg shadow-lg max-w-md mx-auto"
-              />
+            <div className="flex-1 md:w-1/3 relative">
+              {/* Decorative rectangles */}
+              <div className="absolute -top-8 right-4 w-24 h-8 bg-accent/20 rounded-lg transform rotate-12"></div>
+              <div className="absolute -top-6 right-8 w-24 h-8 bg-primary/20 rounded-lg transform -rotate-6"></div>
+              {/* Circular image */}
+              <div className="relative w-64 h-64 mx-auto overflow-hidden rounded-full border-4 border-primary/20">
+                <img 
+                  src="https://images.unsplash.com/photo-1581092795360-fd1ca04f0952"
+                  alt="Professional mentor"
+                  className="w-full h-full object-cover"
+                />
+              </div>
             </div>
           </div>
         </div>
@@ -86,32 +92,22 @@ const Index = () => {
       {/* Service Section */}
       <section className="py-20 bg-secondary/10">
         <div className="container mx-auto px-4">
-          <h2 className="text-3xl font-bold text-center mb-12 text-primary">השלבים בפתרון הבעיה</h2>
-          <div className="grid md:grid-cols-2 lg:grid-cols-5 gap-8">
+          <h2 className="text-3xl font-bold text-center mb-12 text-primary">אז איך זה נראה?</h2>
+          <div className="grid md:grid-cols-3 gap-8 max-w-4xl mx-auto">
             <FeatureCard
-              title="אבחון ראשוני"
-              description="אבחון ראשוני של צרכי המכירות שלך"
-              Icon={ClipboardList}
-            />
-            <FeatureCard
-              title="תכנית אישית"
-              description="בניית תכנית אימון אישית ומותאמת"
+              title="ליווי להצלחה"
+              description="בעזרת ליווי, הכוונה, והדרכה של טכניקות מכירה"
               Icon={LineChart}
             />
             <FeatureCard
-              title="תרגול מעשי"
-              description="תרגול מעשי של טכניקות מכירה"
+              title="בניית תוכנית אישית"
+              description="בניית תכנית אימון אישית ומותאמת"
               Icon={Target}
             />
             <FeatureCard
-              title="ליווי ותמיכה"
-              description="ליווי ותמיכה אישיים"
-              Icon={HeartHandshake}
-            />
-            <FeatureCard
-              title="מעקב ושיפור"
-              description="מעקב אחר תוצאות ושיפור מתמיד"
-              Icon={Trophy}
+              title="אבחון העסק"
+              description="אבחון ראשוני של צרכי המכירות שלך"
+              Icon={ClipboardList}
             />
           </div>
         </div>

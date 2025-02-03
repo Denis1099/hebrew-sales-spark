@@ -46,7 +46,7 @@ export default {
         },
       },
       fontFamily: {
-        'open-sans': ['"Open Sans"', 'sans-serif'],
+        'noto': ['"Noto Sans Hebrew New"', 'sans-serif'],
       },
       keyframes: {
         "accordion-down": {
