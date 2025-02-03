@@ -2,7 +2,7 @@ import { ConsultationForm } from "@/components/ConsultationForm";
 import { FeatureCard } from "@/components/FeatureCard";
 import { TestimonialCard } from "@/components/TestimonialCard";
 import ResultsSection from "@/components/ResultsSection";
-import { Target, TrendingUp, Users, BarChart, ClipboardList, LineChart, HeartHandshake, Trophy } from "lucide-react";
+import { Target, TrendingUp, Users, BarChart, ClipboardList, LineChart, HeartHandshake, Trophy, MessageCircle } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
 const Index = () => {
@@ -20,7 +20,7 @@ const Index = () => {
         <div className="container mx-auto px-4">
           <div className="flex flex-col-reverse md:flex-row items-center gap-8">
             {/* Content Side */}
-            <div className="flex-1 space-y-6">
+            <div className="flex-1 space-y-6 text-center md:text-right">
               <div className="text-accent text-xl">
                 ניר בינימין
               </div>
@@ -37,7 +37,7 @@ const Index = () => {
                 הצטרף עכשיו לאימון מכירות אישי ומקצועי שיעזור לך להגיע לתוצאות
               </p>
               <div className="flex flex-col md:flex-row gap-4 items-center">
-                <div className="w-full md:w-auto flex-1">
+                <div className="w-full">
                   <ConsultationForm isCompact={true} />
                 </div>
               </div>
@@ -51,11 +51,11 @@ const Index = () => {
             </div>
             
             {/* Image Side */}
-            <div className="flex-1">
+            <div className="flex-1 md:w-1/3">
               <img 
                 src="https://images.unsplash.com/photo-1581092795360-fd1ca04f0952"
                 alt="Professional mentor"
-                className="w-full h-auto rounded-lg shadow-lg"
+                className="w-full h-auto rounded-lg shadow-lg max-w-md mx-auto"
               />
             </div>
           </div>
@@ -120,8 +120,8 @@ const Index = () => {
       {/* About Section */}
       <section id="about-section" className="py-20 bg-white/50">
         <div className="container mx-auto px-4">
-          <div className="max-w-4xl mx-auto space-y-8">
-            <h2 className="text-3xl font-bold text-center text-primary mb-12">קצת על עצמי</h2>
+          <div className="max-w-4xl mx-auto space-y-8 text-center">
+            <h2 className="text-3xl font-bold text-primary mb-12">קצת על עצמי</h2>
             <div className="space-y-6 text-lg">
               <p>
                 אני ניר בנימין, ואני עוזר לבעלי עסקים לפתח את שריר המכירות בעסק שלהם.
@@ -152,6 +152,16 @@ const Index = () => {
           </div>
         </div>
       </section>
+
+      {/* WhatsApp Button */}
+      <div className="fixed bottom-6 right-6 z-50">
+        <Button 
+          className="rounded-full w-14 h-14 bg-[#25D366] hover:bg-[#20BA5C] shadow-lg flex items-center justify-center"
+          onClick={() => {/* WhatsApp link will be added later */}}
+        >
+          <MessageCircle className="w-6 h-6 text-white" />
+        </Button>
+      </div>
     </div>
   );
 };
