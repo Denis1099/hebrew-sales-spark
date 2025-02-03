@@ -27,7 +27,7 @@ export const ConsultationForm = ({ isCompact = false }: ConsultationFormProps) =
 
   return (
     <form onSubmit={handleSubmit} className="w-full space-y-4" dir="rtl">
-      <div className="space-y-3">
+      <div className={`space-y-3 ${isCompact ? 'md:space-y-0 md:flex md:gap-3' : ''}`}>
         <Input
           type="text"
           placeholder="שם מלא"

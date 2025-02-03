@@ -1,33 +1,62 @@
-import { Target, TrendingUp, Users, BarChart, ClipboardList, LineChart, HeartHandshake, Trophy } from "lucide-react";
 import { ConsultationForm } from "@/components/ConsultationForm";
 import { FeatureCard } from "@/components/FeatureCard";
 import { TestimonialCard } from "@/components/TestimonialCard";
-import Navbar from "@/components/Navbar";
 import ResultsSection from "@/components/ResultsSection";
+import { Target, TrendingUp, Users, BarChart, ClipboardList, LineChart, HeartHandshake, Trophy } from "lucide-react";
+import { Button } from "@/components/ui/button";
 
 const Index = () => {
+  const scrollToAbout = () => {
+    const aboutSection = document.getElementById('about-section');
+    if (aboutSection) {
+      aboutSection.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
+
   return (
     <div className="min-h-screen bg-background font-open-sans" dir="rtl">
-      <Navbar />
-      
       {/* Hero Section */}
-      <section className="pt-32 pb-20 relative">
+      <section className="pt-20 pb-20 relative">
         <div className="container mx-auto px-4">
-          <div className="max-w-4xl mx-auto text-center space-y-8">
-            <h1 className="text-4xl md:text-5xl font-bold text-primary">
-              רצים לעבר אחוזי סגירה גבוהים
-            </h1>
-            <p className="text-xl text-text">
-              עזרתי לעשרות בעלי עסקים לשפר את המכירות בעסק שלהם, ועכשיו אני כאן כדי לעזור גם לך!
-            </p>
-            <h2 className="text-2xl font-bold text-accent">
-              רוצה למכור יותר ולשפר אחוזי המרה?
-            </h2>
-            <p className="text-lg text-text">
-              הצטרף עכשיו לאימון מכירות אישי ומקצועי שיעזור לך להגיע לתוצאות
-            </p>
-            <div className="max-w-md mx-auto">
-              <ConsultationForm isCompact={true} />
+          <div className="flex flex-col-reverse md:flex-row items-center gap-8">
+            {/* Content Side */}
+            <div className="flex-1 space-y-6">
+              <div className="text-accent text-xl">
+                ניר בינימין
+              </div>
+              <h1 className="text-4xl md:text-5xl font-bold text-primary leading-tight">
+                רצים לעבר אחוזי סגירה גבוהים
+              </h1>
+              <p className="text-xl text-text">
+                עזרתי לעשרות בעלי עסקים לשפר את המכירות בעסק שלהם, ועכשיו אני כאן כדי לעזור גם לך!
+              </p>
+              <h2 className="text-2xl font-bold text-accent">
+                רוצה למכור יותר ולשפר אחוזי המרה?
+              </h2>
+              <p className="text-lg text-text">
+                הצטרף עכשיו לאימון מכירות אישי ומקצועי שיעזור לך להגיע לתוצאות
+              </p>
+              <div className="flex flex-col md:flex-row gap-4 items-center">
+                <div className="w-full md:w-auto flex-1">
+                  <ConsultationForm isCompact={true} />
+                </div>
+              </div>
+              <Button 
+                onClick={scrollToAbout}
+                variant="outline"
+                className="w-full md:w-auto mt-4 border-primary text-primary hover:bg-primary hover:text-white"
+              >
+                אני רוצה לשמוע עוד
+              </Button>
+            </div>
+            
+            {/* Image Side */}
+            <div className="flex-1">
+              <img 
+                src="https://images.unsplash.com/photo-1581092795360-fd1ca04f0952"
+                alt="Professional mentor"
+                className="w-full h-auto rounded-lg shadow-lg"
+              />
             </div>
           </div>
         </div>
@@ -89,7 +118,7 @@ const Index = () => {
       </section>
 
       {/* About Section */}
-      <section className="py-20 bg-white/50">
+      <section id="about-section" className="py-20 bg-white/50">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto space-y-8">
             <h2 className="text-3xl font-bold text-center text-primary mb-12">קצת על עצמי</h2>
