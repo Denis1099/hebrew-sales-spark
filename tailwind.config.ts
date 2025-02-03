@@ -19,16 +19,14 @@ export default {
     },
     extend: {
       colors: {
-        primary: "#071330", // Dark Blue for main headlines
-        accent: "#392C3D", // Marsala for subheadlines
-        secondary: "#394B6F", // Cornflower for CTAs
-        neutral: "#CECFD3", // Pewter for subtle elements
-        success: "#48BB78",
-        textDark: "#1A202C",
+        primary: "#fca522", // Orange for CTAs
+        accent: "#5aade5", // Blue for accents
+        secondary: "#96cdf1", // Light blue for secondary elements
+        background: "#f4f9fc", // Light background
+        text: "#000000", // Text color
         border: "hsl(var(--border))",
         input: "hsl(var(--input))",
         ring: "hsl(var(--ring))",
-        background: "hsl(var(--background))",
         foreground: "hsl(var(--foreground))",
         destructive: {
           DEFAULT: "hsl(var(--destructive))",
@@ -49,7 +47,6 @@ export default {
       },
       fontFamily: {
         'open-sans': ['"Open Sans"', 'sans-serif'],
-        playfair: ["Playfair Display", "serif"],
       },
       keyframes: {
         "accordion-down": {

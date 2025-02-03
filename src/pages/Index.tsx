@@ -1,4 +1,4 @@
-import { Target, TrendingUp, Users, BarChart } from "lucide-react";
+import { Target, TrendingUp, Users, BarChart, ClipboardList, LineChart, HeartHandshake, Trophy } from "lucide-react";
 import { ConsultationForm } from "@/components/ConsultationForm";
 import { FeatureCard } from "@/components/FeatureCard";
 import { TestimonialCard } from "@/components/TestimonialCard";
@@ -7,117 +7,119 @@ import ResultsSection from "@/components/ResultsSection";
 
 const Index = () => {
   return (
-    <div className="min-h-screen bg-gradient-to-b from-[#F8F8F8] to-white font-open-sans" dir="rtl">
-      {/* Background Effects */}
-      <div className="fixed inset-0 -z-10 overflow-hidden">
-        <div className="absolute top-0 right-0 w-[600px] h-[600px] bg-primary/10 rounded-full blur-3xl" />
-        <div className="absolute top-[30%] left-0 w-[500px] h-[500px] bg-accent/10 rounded-full blur-3xl" />
-        <div className="absolute bottom-0 right-[20%] w-[700px] h-[700px] bg-secondary/10 rounded-full blur-3xl" />
-      </div>
-      
+    <div className="min-h-screen bg-background font-open-sans" dir="rtl">
       <Navbar />
       
       {/* Hero Section */}
       <section className="pt-32 pb-20 relative">
-        <div className="container mx-auto px-4 grid md:grid-cols-2 gap-12 items-center">
-          <div className="text-right space-y-8">
-            <h1 className="text-4xl md:text-5xl font-bold mb-6 text-primary">
-              הגדל את המכירות שלך
-              <br />
-              <span className="text-accent">עם אימון מכירות מקצועי</span>
+        <div className="container mx-auto px-4">
+          <div className="max-w-4xl mx-auto text-center space-y-8">
+            <h1 className="text-4xl md:text-5xl font-bold text-primary">
+              רצים לעבר אחוזי סגירה גבוהים
             </h1>
-            <p className="text-xl text-gray-600 mb-8">
-              למד טכניקות מכירה מוכחות ושפר את הביצועים שלך עם תוכנית אימון אישית
+            <p className="text-xl text-text">
+              עזרתי לעשרות בעלי עסקים לשפר את המכירות בעסק שלהם, ועכשיו אני כאן כדי לעזור גם לך!
             </p>
-            <div className="max-w-md">
+            <h2 className="text-2xl font-bold text-accent">
+              רוצה למכור יותר ולשפר אחוזי המרה?
+            </h2>
+            <p className="text-lg text-text">
+              הצטרף עכשיו לאימון מכירות אישי ומקצועי שיעזור לך להגיע לתוצאות
+            </p>
+            <div className="max-w-md mx-auto">
               <ConsultationForm isCompact={true} />
             </div>
           </div>
-          <div className="relative">
-            <img
-              src="https://images.unsplash.com/photo-1519389950473-47ba0277781c"
-              alt="Business Meeting"
-              className="rounded-2xl shadow-2xl"
-            />
-            <div className="absolute inset-0 bg-primary/10 rounded-2xl backdrop-blur-sm" />
+        </div>
+      </section>
+
+      {/* Problem Section */}
+      <section className="py-20 bg-white/50 backdrop-blur-sm">
+        <div className="container mx-auto px-4">
+          <div className="max-w-4xl mx-auto space-y-12">
+            <div className="text-center space-y-6">
+              <h2 className="text-3xl font-bold text-primary">חולמים על עסק מצליח אבל חוששים ממכירות?</h2>
+              <p className="text-lg">
+                בעלי עסקים רבים חוששים ממכירות ומרגישים שזה לא "מתאים" להם. הם חושבים שצריך להיות "נוכל" או אגרסיבי כדי למכור, אבל זה ממש לא נכון!
+              </p>
+            </div>
+            
+            <div className="text-center space-y-6">
+              <h3 className="text-2xl font-bold text-accent">אני אראה לך שאפשר למכור אחרת!</h3>
+              <p className="text-lg">
+                גם אם אתה ביישן או מופנם, או שקשה לך לדבר עם זרים בטלפון, אני אעזור לך לפתח את שריר המכירות שלך ולהצליח למכור בדרך שלך.
+              </p>
+            </div>
           </div>
         </div>
       </section>
 
-      {/* Results Section */}
-      <ResultsSection />
-
-      {/* Features Section */}
-      <section className="py-20 relative">
-        <div className="absolute inset-0 bg-white/40 backdrop-blur-md" />
-        <div className="container mx-auto px-4 relative">
-          <h2 className="text-3xl font-playfair font-bold text-center mb-12 text-primary">
-            איך נעזור לך להצליח
-          </h2>
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+      {/* Service Section */}
+      <section className="py-20 bg-secondary/10">
+        <div className="container mx-auto px-4">
+          <h2 className="text-3xl font-bold text-center mb-12 text-primary">השלבים בפתרון הבעיה</h2>
+          <div className="grid md:grid-cols-2 lg:grid-cols-5 gap-8">
             <FeatureCard
-              title="שיפור ביצועים"
-              description="טכניקות מוכחות להגדלת אחוזי סגירה ומכירות"
-              Icon={TrendingUp}
+              title="אבחון ראשוני"
+              description="אבחון ראשוני של צרכי המכירות שלך"
+              Icon={ClipboardList}
             />
             <FeatureCard
-              title="אסטרטגיית מכירות"
-              description="בניית תהליך מכירה אפקטיבי ומותאם אישית"
+              title="תכנית אישית"
+              description="בניית תכנית אימון אישית ומותאמת"
+              Icon={LineChart}
+            />
+            <FeatureCard
+              title="תרגול מעשי"
+              description="תרגול מעשי של טכניקות מכירה"
               Icon={Target}
             />
             <FeatureCard
-              title="פיתוח צוות"
-              description="הכשרת צוות המכירות שלך לביצועים מקסימליים"
-              Icon={Users}
+              title="ליווי ותמיכה"
+              description="ליווי ותמיכה אישיים"
+              Icon={HeartHandshake}
             />
             <FeatureCard
-              title="מדידה ובקרה"
-              description="כלים למעקב והערכת ביצועים"
-              Icon={BarChart}
+              title="מעקב ושיפור"
+              description="מעקב אחר תוצאות ושיפור מתמיד"
+              Icon={Trophy}
             />
           </div>
         </div>
       </section>
 
-      {/* Testimonials Section */}
-      <section className="py-20 relative">
-        <div className="absolute inset-0 bg-[#F8F8F8]/60 backdrop-blur-lg" />
-        <div className="container mx-auto px-4 relative">
-          <h2 className="text-3xl font-playfair font-bold text-center mb-12 text-primary">
-            מה הלקוחות אומרים
-          </h2>
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-            <TestimonialCard
-              name="דני כהן"
-              role="מנהל מכירות"
-              company="טכנולוגיות ABC"
-              content="האימון שינה לחלוטין את הגישה שלי למכירות. תוך 3 חודשים הכפלנו את המכירות החודשיות."
-            />
-            <TestimonialCard
-              name="מיכל לוי"
-              role="סמנכ״לית מכירות"
-              company="חברת XYZ"
-              content="הכלים והטכניקות שלמדתי עזרו לי לבנות צוות מכירות חזק ומקצועי."
-            />
-            <TestimonialCard
-              name="יוסי אברהם"
-              role="יזם"
-              company="סטארט-אפ חדשני"
-              content="ההשקעה באימון החזירה את עצמה תוך חודשיים. ממליץ בחום!"
-            />
+      {/* About Section */}
+      <section className="py-20 bg-white/50">
+        <div className="container mx-auto px-4">
+          <div className="max-w-4xl mx-auto space-y-8">
+            <h2 className="text-3xl font-bold text-center text-primary mb-12">קצת על עצמי</h2>
+            <div className="space-y-6 text-lg">
+              <p>
+                אני ניר בנימין, ואני עוזר לבעלי עסקים לפתח את שריר המכירות בעסק שלהם.
+              </p>
+              <p>
+                גם אני הייתי פעם ביישן ומופנם, וחשבתי שמכירות זה לא בשבילי. אבל החלטתי לאתגר את עצמי, ועברתי 5 שנים של עבודה במוקדי מכירות שונים, שם למדתי את כל רזי המכירה.
+              </p>
+              <p>
+                ראיתי שאני מצליח למכור להרבה אנשים, אבל עדיין הרגשתי שאני יכול יותר. החלטתי לצאת לדרך עצמאית, והיום אני עוזר לבעלי עסקים למכור יותר ולשפר את אחוזי ההמרה שלהם.
+              </p>
+              <p>
+                אני גם רץ מרתונים! הריצה עוזרת לי בעסק במספר דרכים: הצבת מטרות, נחישות, סבלנות, הסתכלות על הדרך ולא על התוצאה ותמיד לחפש דרכים להשתפר. את המנטליות הזו אני משריש גם ללקוחות שלי.
+              </p>
+            </div>
           </div>
         </div>
       </section>
 
-      {/* Full Consultation Form Section */}
-      <section className="py-20 relative">
-        <div className="absolute inset-0 bg-[#F8F8F8]/80 backdrop-blur-xl" />
-        <div className="container mx-auto px-4 max-w-2xl relative">
-          <h2 className="text-3xl font-bold text-center mb-12 text-primary">
-            מוכן להתחיל? צור קשר עכשיו
-          </h2>
-          <div className="bg-white/80 backdrop-blur-sm p-8 rounded-2xl shadow-xl">
-            <ConsultationForm />
+      {/* Closing Section */}
+      <section className="py-20 bg-secondary/10">
+        <div className="container mx-auto px-4">
+          <div className="max-w-2xl mx-auto text-center space-y-8">
+            <h2 className="text-3xl font-bold text-primary">הגיע הזמן להפסיק לפחד ממכירות ולהתחיל למכור יותר!</h2>
+            <p className="text-xl text-accent">צרו קשר עוד היום ונתחיל במסע שלכם להצלחה במכירות!</p>
+            <div className="max-w-md mx-auto">
+              <ConsultationForm />
+            </div>
           </div>
         </div>
       </section>
