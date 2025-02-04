@@ -1,7 +1,6 @@
 import { useState } from "react";
 import { Button } from "./ui/button";
 import { Input } from "./ui/input";
-import { Textarea } from "./ui/textarea";
 import { useToast } from "@/hooks/use-toast";
 
 interface ConsultationFormProps {
@@ -26,15 +25,15 @@ export const ConsultationForm = ({ isCompact = false }: ConsultationFormProps) =
   };
 
   return (
-    <form onSubmit={handleSubmit} className="w-full space-y-4" dir="rtl">
-      <div className={`space-y-3 ${isCompact ? 'md:space-y-0 md:flex md:gap-3' : ''}`}>
+    <form onSubmit={handleSubmit} className="w-full" dir="rtl">
+      <div className={`space-y-4 ${isCompact ? 'md:space-y-0 md:flex md:gap-4' : ''}`}>
         <Input
           type="text"
           placeholder="שם מלא"
           value={formData.name}
           onChange={(e) => setFormData({ ...formData, name: e.target.value })}
           required
-          className="text-right"
+          className="text-right rounded-full bg-white/90 border-none shadow-sm"
         />
         <Input
           type="tel"
@@ -42,20 +41,32 @@ export const ConsultationForm = ({ isCompact = false }: ConsultationFormProps) =
           value={formData.phone}
           onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
           required
-          className="text-right"
+          className="text-right rounded-full bg-white/90 border-none shadow-sm"
         />
         {!isCompact && (
-          <Textarea
+          <textarea
             placeholder="קצת על עצמך.."
             value={formData.about}
             onChange={(e) => setFormData({ ...formData, about: e.target.value })}
-            className="text-right min-h-[100px]"
+            className="text-right min-h-[100px] rounded-xl"
           />
         )}
       </div>
-      <Button type="submit" className="w-full bg-secondary hover:bg-secondary/90 text-white font-bold">
-        קבע שיחת ייעוץ
-      </Button>
+      <div className="flex gap-4 mt-4">
+        <Button 
+          type="button" 
+          onClick={() => {}} 
+          className="flex-1 rounded-full bg-accent text-white hover:bg-accent/90"
+        >
+          אני רוצה פרטים נוספים
+        </Button>
+        <Button 
+          type="submit" 
+          className="flex-1 rounded-full bg-primary text-white hover:bg-primary/90"
+        >
+          בוא נדבר!
+        </Button>
+      </div>
     </form>
   );
 };

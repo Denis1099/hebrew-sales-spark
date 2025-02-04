@@ -1,7 +1,5 @@
 import { ConsultationForm } from "@/components/ConsultationForm";
 import { FeatureCard } from "@/components/FeatureCard";
-import { TestimonialCard } from "@/components/TestimonialCard";
-import ResultsSection from "@/components/ResultsSection";
 import { Target, TrendingUp, Users, BarChart, ClipboardList, LineChart, HeartHandshake, Trophy, MessageCircle } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
@@ -36,25 +34,13 @@ const Index = () => {
               <p className="text-lg text-text">
               אימון מכירות אישי ומקצועי ברמה הגבוהה ביותר: הצטרפו עכשיו והתחילו למכור יותר.
               </p>
-              <div className="flex flex-col md:flex-row gap-4 items-center">
-                <div className="w-full md:w-2/3">
-                  <ConsultationForm isCompact={true} />
-                </div>
-                <div className="w-full md:w-1/3">
-                  <Button 
-                    onClick={scrollToAbout}
-                    variant="outline"
-                    className="w-full border-primary text-primary hover:bg-primary hover:text-white"
-                  >
-                    אני רוצה לשמוע עוד
-                  </Button>
-                </div>
+              <div className="max-w-2xl mx-auto">
+                <ConsultationForm isCompact={true} />
               </div>
             </div>
             
             {/* Image Side */}
             <div className="flex-1 md:w-1/3 relative">
-              {/* Circular image */}
               <div className="relative w-64 h-64 mx-auto overflow-hidden rounded-full border-4 border-primary/20">
                 <img 
                   src="https://images.unsplash.com/photo-1581092795360-fd1ca04f0952"
@@ -94,9 +80,9 @@ const Index = () => {
           <h2 className="text-3xl font-bold text-center mb-12 text-primary">אז איך זה נראה?</h2>
           <div className="grid md:grid-cols-3 gap-8 max-w-4xl mx-auto">
             <FeatureCard
-              title="ליווי להצלחה"
-              description="בעזרת ליווי, הכוונה, והדרכה של טכניקות מכירה"
-              Icon={LineChart}
+              title="אבחון העסק"
+              description="אבחון ראשוני של צרכי המכירות שלך"
+              Icon={ClipboardList}
             />
             <FeatureCard
               title="בניית תוכנית אישית"
@@ -104,9 +90,9 @@ const Index = () => {
               Icon={Target}
             />
             <FeatureCard
-              title="אבחון העסק"
-              description="אבחון ראשוני של צרכי המכירות שלך"
-              Icon={ClipboardList}
+              title="ליווי להצלחה"
+              description="בעזרת ליווי, הכוונה, והדרכה של טכניקות מכירה"
+              Icon={LineChart}
             />
           </div>
         </div>
