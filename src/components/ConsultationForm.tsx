@@ -1,7 +1,7 @@
-import { useState, type ChangeEvent } from "react";
-import { Input } from "@/components/ui/input";
-import { Button } from "@/components/ui/button";
-import { Textarea } from "@/components/ui/textarea";
+import { useState } from "react";
+import { Button } from "./ui/button";
+import { Input } from "./ui/input";
+import { useToast } from "@/hooks/use-toast";
 
 interface ConsultationFormProps {
   isCompact?: boolean;
@@ -11,39 +11,41 @@ export const ConsultationForm = ({ isCompact = false }: ConsultationFormProps) =
   const [formData, setFormData] = useState({
     name: "",
     phone: "",
-    email: "",
     about: "",
   });
+  const { toast } = useToast();
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    // Form submission logic here
-    console.log("Form submitted:", formData);
+    toast({
+      title: "!תודה על פנייתך",
+      description: ".ניצור איתך קשר בהקדם",
+    });
+    setFormData({ name: "", phone: "", about: "" });
   };
 
   return (
-    <form onSubmit={handleSubmit} className="space-y-4">
-      <div className="space-y-4">
+    <form onSubmit={handleSubmit} className="w-full" dir="rtl">
+      <div className={`space-y-4 ${isCompact ? 'md:space-y-0 md:flex md:gap-4' : ''}`}>
         <Input
+          type="text"
           placeholder="שם מלא"
           value={formData.name}
           onChange={(e) => setFormData({ ...formData, name: e.target.value })}
+          required
           className="text-right rounded-full bg-white/90 border-none shadow-sm"
         />
         <Input
+          type="tel"
           placeholder="טלפון"
           value={formData.phone}
           onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
-          className="text-right rounded-full bg-white/90 border-none shadow-sm"
-        />
-        <Input
-          placeholder='דוא"ל'
-          value={formData.email}
-          onChange={(e) => setFormData({ ...formData, email: e.target.value })}
+          required
           className="text-right rounded-full bg-white/90 border-none shadow-sm"
         />
         {!isCompact && (
-          <Textarea
+          <Input
+            as="textarea"
             placeholder="קצת על עצמך.."
             value={formData.about}
             onChange={(e) => setFormData({ ...formData, about: e.target.value })}
