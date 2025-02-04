@@ -20,34 +20,36 @@ const Index = () => {
         <div className="container mx-auto px-4">
           <div className="flex flex-col-reverse md:flex-row items-center gap-8">
             {/* Content Side */}
-            <div className="flex-1 space-y-6 text-center ">
+            <div className="flex-1 space-y-6 text-center">
               <div className="text-accent text-xl">
                  ניר בינימין מציג:
               </div>
               <h1 className="text-4xl md:text-5xl font-extrabold text-primary leading-tight">
-                רצים לעבר אחוזי סגירה גבוהים
+                רצים לעבר אחוזי סגירה גבוהים יותר
               </h1>
               <p className="text-xl text-text">
-              עזרתי לעשרות בעלי עסקים לשפר את המכירות בעסק שלהם, ועכשיו אני כאן כדי לעזור גם לך!
+              שיטת אימון מוכחת שתעזור לכם להתגבר על הפחד משיחות מכירה.
               </p>
               <h2 className="text-2xl font-extrabold text-accent">
-              רוצה למכור יותר ולשפר אחוזי המרה?
+              בין אם אתם רק מתחילים או בעלי ניסיון רב שנים, שיטה זו תעניק לכם את הכלים לחדד את כישוריכם ולשפר את התוצאות שלכם.
               </h2>
               <p className="text-lg text-text">
-              הצטרף עכשיו לאימון מכירות אישי ומקצועי שיעזור לך להגיע לתוצאות
+              אימון מכירות אישי ומקצועי ברמה הגבוהה ביותר: הצטרפו עכשיו והתחילו למכור יותר.
               </p>
               <div className="flex flex-col md:flex-row gap-4 items-center">
-                <div className="w-full">
+                <div className="w-full md:w-2/3">
                   <ConsultationForm isCompact={true} />
                 </div>
+                <div className="w-full md:w-1/3">
+                  <Button 
+                    onClick={scrollToAbout}
+                    variant="outline"
+                    className="w-full border-primary text-primary hover:bg-primary hover:text-white"
+                  >
+                    אני רוצה לשמוע עוד
+                  </Button>
+                </div>
               </div>
-              <Button 
-                onClick={scrollToAbout}
-                variant="outline"
-                className="w-full md:w-auto mt-4 border-primary text-primary hover:bg-primary hover:text-white"
-              >
-                אני רוצה לשמוע עוד
-              </Button>
             </div>
             
             {/* Image Side */}
