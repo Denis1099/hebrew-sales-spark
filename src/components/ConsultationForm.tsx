@@ -34,7 +34,7 @@ export const ConsultationForm = ({ isCompact = false }: ConsultationFormProps) =
           value={formData.name}
           onChange={(e) => setFormData({ ...formData, name: e.target.value })}
           required
-          className="text-right"
+          className="text-right rounded-full shadow-sm"
         />
         <Input
           type="tel"
@@ -42,7 +42,7 @@ export const ConsultationForm = ({ isCompact = false }: ConsultationFormProps) =
           value={formData.phone}
           onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
           required
-          className="text-right"
+          className="text-right rounded-full shadow-sm"
         />
         {!isCompact && (
           <Textarea
@@ -53,9 +53,14 @@ export const ConsultationForm = ({ isCompact = false }: ConsultationFormProps) =
           />
         )}
       </div>
-      <Button type="submit" className="w-full bg-secondary hover:bg-secondary/90 text-white font-bold">
-        קבע שיחת ייעוץ
-      </Button>
+      <div className="flex gap-3">
+        <Button type="submit" className="w-full bg-[#C41B7E] hover:bg-[#A01568] text-white font-bold rounded-full">
+          בוא נדבר!
+        </Button>
+        <Button type="button" className="w-full bg-[#5AADE5] hover:bg-[#4089B8] text-white font-bold rounded-full">
+          אני רוצה פרטים נוספים
+        </Button>
+      </div>
     </form>
   );
 };

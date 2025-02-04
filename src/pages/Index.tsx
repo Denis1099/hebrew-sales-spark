@@ -36,18 +36,9 @@ const Index = () => {
               <p className="text-lg text-text">
               אימון מכירות אישי ומקצועי ברמה הגבוהה ביותר: הצטרפו עכשיו והתחילו למכור יותר.
               </p>
-              <div className="flex flex-col md:flex-row gap-4 items-center">
-                <div className="w-full md:w-2/3">
+              <div className="flex flex-col md:flex-row gap-4 justify-center">
+                <div className="w-full md:w-1/2">
                   <ConsultationForm isCompact={true} />
-                </div>
-                <div className="w-full md:w-1/3">
-                  <Button 
-                    onClick={scrollToAbout}
-                    variant="outline"
-                    className="w-full border-primary text-primary hover:bg-primary hover:text-white"
-                  >
-                    אני רוצה לשמוע עוד
-                  </Button>
                 </div>
               </div>
             </div>
@@ -94,9 +85,9 @@ const Index = () => {
           <h2 className="text-3xl font-bold text-center mb-12 text-primary">אז איך זה נראה?</h2>
           <div className="grid md:grid-cols-3 gap-8 max-w-4xl mx-auto">
             <FeatureCard
-              title="ליווי להצלחה"
-              description="בעזרת ליווי, הכוונה, והדרכה של טכניקות מכירה"
-              Icon={LineChart}
+              title="אבחון העסק"
+              description="אבחון ראשוני של צרכי המכירות שלך"
+              Icon={ClipboardList}
             />
             <FeatureCard
               title="בניית תוכנית אישית"
@@ -104,9 +95,9 @@ const Index = () => {
               Icon={Target}
             />
             <FeatureCard
-              title="אבחון העסק"
-              description="אבחון ראשוני של צרכי המכירות שלך"
-              Icon={ClipboardList}
+              title="ליווי להצלחה"
+              description="בעזרת ליווי, הכוונה, והדרכה של טכניקות מכירה"
+              Icon={LineChart}
             />
           </div>
         </div>
