@@ -44,25 +44,19 @@ export const ConsultationForm = ({ isCompact = false }: ConsultationFormProps) =
           className="text-right rounded-full bg-white/90 border-none shadow-sm"
         />
         {!isCompact && (
-          <textarea
+          <Input
+            as="textarea"
             placeholder="קצת על עצמך.."
             value={formData.about}
             onChange={(e) => setFormData({ ...formData, about: e.target.value })}
-            className="text-right min-h-[100px] rounded-xl"
+            className="text-right rounded-full bg-white/90 border-none shadow-sm min-h-[100px]"
           />
         )}
       </div>
-      <div className="flex gap-4 mt-4">
-        <Button 
-          type="button" 
-          onClick={() => {}} 
-          className="flex-1 rounded-full bg-accent text-white hover:bg-accent/90"
-        >
-          אני רוצה פרטים נוספים
-        </Button>
+      <div className="mt-4">
         <Button 
           type="submit" 
-          className="flex-1 rounded-full bg-primary text-white hover:bg-primary/90"
+          className="w-full rounded-full bg-primary text-white hover:bg-primary/90"
         >
           בוא נדבר!
         </Button>
