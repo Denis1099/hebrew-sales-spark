@@ -24,17 +24,17 @@ const Index = () => {
               <div className="text-accent text-xl">
                  ניר בינימין מציג:
               </div>
-              <h1 className="text-4xl md:text-5xl font-bold text-primary leading-tight">
-                רצים לעבר אחוזי סגירה גבוהים יותר
+              <h1 className="text-4xl md:text-5xl font-extrabold text-primary leading-tight">
+                רצים לעבר אחוזי סגירה גבוהים
               </h1>
               <p className="text-xl text-text">
-              שיטת אימון מוכחת שתעזור לכם להתגבר על הפחד משיחות מכירה.
+              עזרתי לעשרות בעלי עסקים לשפר את המכירות בעסק שלהם, ועכשיו אני כאן כדי לעזור גם לך!
               </p>
-              <h2 className="text-2xl font-bold text-accent">
-              בין אם אתם רק מתחילים או בעלי ניסיון רב שנים, שיטה זו תעניק לכם את הכלים לחדד את כישוריכם ולשפר את התוצאות שלכם.
+              <h2 className="text-2xl font-extrabold text-accent">
+              רוצה למכור יותר ולשפר אחוזי המרה?
               </h2>
               <p className="text-lg text-text">
-              אימון מכירות אישי ומקצועי ברמה הגבוהה ביותר: הצטרפו עכשיו והתחילו למכור יותר.
+              הצטרף עכשיו לאימון מכירות אישי ומקצועי שיעזור לך להגיע לתוצאות
               </p>
               <div className="flex flex-col md:flex-row gap-4 items-center">
                 <div className="w-full">
@@ -52,9 +52,6 @@ const Index = () => {
             
             {/* Image Side */}
             <div className="flex-1 md:w-1/3 relative">
-              {/* Decorative rectangles */}
-              <div className="absolute -top-8 right-4 w-24 h-8 bg-accent/20 rounded-lg transform rotate-12"></div>
-              <div className="absolute -top-6 right-8 w-24 h-8 bg-primary/20 rounded-lg transform -rotate-6"></div>
               {/* Circular image */}
               <div className="relative w-64 h-64 mx-auto overflow-hidden rounded-full border-4 border-primary/20">
                 <img 
