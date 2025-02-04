@@ -1,52 +1,44 @@
 import { ConsultationForm } from "@/components/ConsultationForm";
 import { FeatureCard } from "@/components/FeatureCard";
-import { Target, TrendingUp, Users, BarChart, ClipboardList, LineChart, HeartHandshake, Trophy, MessageCircle } from "lucide-react";
+import { Target, LineChart, ClipboardList, MessageCircle } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
 const Index = () => {
-  const scrollToAbout = () => {
-    const aboutSection = document.getElementById('about-section');
-    if (aboutSection) {
-      aboutSection.scrollIntoView({ behavior: 'smooth' });
-    }
-  };
-
   return (
     <div className="min-h-screen bg-background font-noto" dir="rtl">
       {/* Hero Section */}
-      <section className="pt-20 pb-20 relative">
+      <section className="h-screen relative bg-background flex items-center">
         <div className="container mx-auto px-4">
-          <div className="flex flex-col-reverse md:flex-row items-center gap-8">
-            {/* Content Side */}
-            <div className="flex-1 space-y-6 text-center">
-              <div className="text-accent text-xl">
-                 ניר בינימין מציג:
+          <div className="flex flex-wrap items-center gap-[-73px]">
+            {/* Left Side - Floating Cards */}
+            <div className="flex-1 min-w-[240px] mt-auto mb-auto pl-20 flex flex-col text-right w-[549px] relative md:pl-0">
+              <div className="bg-white rounded-xl shadow-[0px_100px_80px_rgba(0,0,0,0.07)] self-end w-[275px] max-w-full px-7 py-6 text-base">
+                30% שיפור באחוזי הסגירה
               </div>
-              <h1 className="text-4xl md:text-5xl font-extrabold text-primary leading-tight">
-                רצים לעבר אחוזי סגירה גבוהים יותר
-              </h1>
-              <p className="text-xl text-text">
-              שיטת אימון מוכחת שתעזור לכם להתגבר על הפחד משיחות מכירה.
-              </p>
-              <h2 className="text-2xl font-extrabold text-accent">
-              בין אם אתם רק מתחילים או בעלי ניסיון רב שנים, שיטה זו תעניק לכם את הכלים לחדד את כישוריכם ולשפר את התוצאות שלכם.
-              </h2>
-              <p className="text-lg text-text">
-              אימון מכירות אישי ומקצועי ברמה הגבוהה ביותר: הצטרפו עכשיו והתחילו למכור יותר.
-              </p>
-              <div className="max-w-2xl mx-auto">
-                <ConsultationForm isCompact={true} />
+              <div className="bg-white rounded-xl shadow-[0px_100px_80px_rgba(0,0,0,0.07)] self-center mt-[398px] ml-[61px] w-[217px] max-w-full px-1 py-7 text-sm md:mt-10 md:ml-0">
+                הגדלת רווחי העסק במאות אחוזים
               </div>
             </div>
-            
-            {/* Image Side */}
-            <div className="flex-1 md:w-1/3 relative">
-              <div className="relative w-64 h-64 mx-auto overflow-hidden rounded-full border-4 border-primary/20">
-                <img 
-                  src="https://images.unsplash.com/photo-1581092795360-fd1ca04f0952"
-                  alt="Professional mentor"
-                  className="w-full h-full object-cover"
-                />
+
+            {/* Right Side - Main Content */}
+            <div className="flex-1 min-w-[240px] mt-auto mb-auto flex flex-col items-center justify-start w-[653px] max-w-full">
+              <div className="w-full max-w-[653px] px-9 pb-10 flex flex-col items-end text-[22px] text-black text-right md:px-5">
+                <div className="leading-[1.3]">
+                  ניר בינימין מציג:
+                </div>
+                <h1 className="text-[#0B1B35] text-[70px] font-extrabold leading-[81px] mt-3.5 md:text-[40px] md:leading-[51px]">
+                  רצים לעבר אחוזי סגירה גבוהים יותר
+                </h1>
+                <p className="leading-[29px] mt-[73px] md:mt-10">
+                  שיטת אימון מוכחת שתעזור לכם להתגבר על הפחד משיחות מכירה, בין אם אתם רק מתחילים או בעלי ניסיון רב שנים, שיטה זו תעניק לכם את הכלים לחדד את כישוריכם ולשפר את התוצאות שלכם.
+                </p>
+              </div>
+              <div className="mt-4 w-[170px] max-w-full text-lg text-white">
+                <Button 
+                  className="w-full rounded-[10px] bg-[#FF6600] hover:bg-[#FF6600]/90 px-3 py-3 text-center"
+                >
+                  לשיחת ייעוץ בחינם
+                </Button>
               </div>
             </div>
           </div>
