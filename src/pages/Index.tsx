@@ -25,10 +25,7 @@ const Index = () => {
               <h1 className="text-4xl md:text-5xl font-extrabold text-primary leading-tight">
                 רצים לעבר אחוזי סגירה גבוהים יותר
               </h1>
-              <p className="text-xl text-text">
-              שיטת אימון מוכחת שתעזור לכם להתגבר על הפחד משיחות מכירה.
-              </p>
-              <h2 className="text-2xl font-extrabold text-accent">
+              <h2 className="text-2xl font-extrabold">
               בין אם אתם רק מתחילים או בעלי ניסיון רב שנים, שיטה זו תעניק לכם את הכלים לחדד את כישוריכם ולשפר את התוצאות שלכם.
               </h2>
               <p className="text-lg text-text">
