@@ -31,33 +31,13 @@ const Index = () => {
             
             {/* Image Side */}
             <div className="flex-1 md:w-1/3 relative">
-              <div className="relative w-64 h-64 mx-auto overflow-hidden rounded-full border-4 border-primary/20">
+              <div className="relative w-64 h-64 mx-auto">
                 <img 
                   src="/lovable-uploads/55cc536e-3a1e-440c-af10-52c5caea543d.png"
                   alt="Professional mentor"
                   className="w-full h-full object-cover"
                 />
               </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <section className="py-20 bg-white/50 backdrop-blur-sm">
-        <div className="container mx-auto px-4">
-          <div className="max-w-4xl mx-auto space-y-12">
-            <div className="text-center space-y-6">
-              <h2 className="text-3xl font-bold text-primary">חולמים על עסק מצליח אבל חוששים ממכירות?</h2>
-              <p className="text-lg">
-                בעלי עסקים רבים חוששים ממכירות ומרגישים שזה לא "מתאים" להם. הם חושבים שצריך להיות "נוכל" או אגרסיבי כדי למכור, אבל זה ממש לא נכון!
-              </p>
-            </div>
-            
-            <div className="text-center space-y-6">
-              <h3 className="text-2xl font-bold text-accent">אני אראה לך שאפשר למכור אחרת!</h3>
-              <p className="text-lg">
-                גם אם אתה ביישן או מופנם, או שקשה לך לדבר עם זרים בטלפון, אני אעזור לך לפתח את שריר המכירות שלך ולהצליח למכור בדרך שלך.
-              </p>
             </div>
           </div>
         </div>
@@ -126,10 +106,10 @@ const Index = () => {
       {/* WhatsApp Button */}
       <div className="fixed bottom-6 right-6 z-50">
         <Button 
-          className="rounded-full w-16 h-16 bg-[#25D366] hover:bg-[#20BA5C] shadow-lg flex items-center justify-center"
+          className="rounded-full w-20 h-20 bg-[#25D366] hover:bg-[#20BA5C] shadow-lg flex items-center justify-center"
           onClick={() => {/* WhatsApp link will be added later */}}
         >
-          <MessageCircle className="w-8 h-8 text-white" />
+          <MessageCircle className="w-12 h-12 text-white" />
         </Button>
       </div>
     </div>
