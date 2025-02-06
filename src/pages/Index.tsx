@@ -8,7 +8,7 @@ const Index = () => {
   return (
     <div className="min-h-screen bg-background font-noto" dir="rtl">
       {/* Hero Section */}
-      <section className="pt-20 pb-20 relative">
+      <section className="pt-10 pb-4 relative">
         <div className="container mx-auto px-4">
           <div className="flex flex-col-reverse md:flex-row items-center gap-8">
             {/* Content Side */}
@@ -34,6 +34,12 @@ const Index = () => {
             <div className="flex-1 md:w-1/3 relative">
               <div className="relative w-96 h-96 mx-auto">
                 <img 
+                  srcSet="/lovable-uploads/55cc536e-3a1e-440c-af10-52c5caea543d-800x800.png 800w,
+                         /lovable-uploads/55cc536e-3a1e-440c-af10-52c5caea543d-600x600.png 600w,
+                         /lovable-uploads/55cc536e-3a1e-440c-af10-52c5caea543d-400x400.png 400w"
+                  sizes="(min-width: 1024px) 800px,
+                         (min-width: 768px) 600px,
+                         400px"
                   src="/lovable-uploads/55cc536e-3a1e-440c-af10-52c5caea543d.png"
                   alt="Professional mentor"
                   className="w-full h-full object-cover border-4 border-primary/30 rounded-2xl transition-all duration-300 hover:border-primary hover:scale-105"
@@ -44,7 +50,7 @@ const Index = () => {
         </div>
       </section>
 
-      {/* Results Section */}
+      {/* Results Section - Moved up */}
       <ResultsSection />
 
       {/* Features Section */}
@@ -100,7 +106,7 @@ const Index = () => {
           <div className="max-w-2xl mx-auto text-center space-y-8">
             <h2 className="text-3xl font-bold text-primary">הגיע הזמן להפסיק לפחד ממכירות ולהתחיל למכור יותר!</h2>
             <p className="text-xl text-accent font-bold">צרו קשר עוד היום ונתחיל במסע שלכם להצלחה במכירות!</p>
-            <div className="max-w-md mx-auto">
+            <div className="max-w-md mx-auto bg-white rounded-lg p-8 shadow-lg">
               <ConsultationForm />
             </div>
           </div>

@@ -37,19 +37,18 @@ export const ConsultationForm = ({ isCompact = false }: ConsultationFormProps) =
         />
         <Input
           type="tel"
-          placeholder="טלפון"
+          placeholder="מספר טלפון"
           value={formData.phone}
           onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
           required
           className="text-right rounded-full bg-white/90 border-none shadow-sm"
         />
         {!isCompact && (
-          <Input
-            type="text"
-            placeholder="קצת על עצמך.."
+          <textarea
+            placeholder="ספר לי קצת על העסק שלך..."
             value={formData.about}
             onChange={(e) => setFormData({ ...formData, about: e.target.value })}
-            className="text-right rounded-lg bg-white/90 border-none shadow-sm min-h-[100px] align-top pt-3 placeholder:align-top"
+            className="w-full text-right rounded-lg bg-white/90 border-none shadow-sm min-h-[100px] p-3 placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2"
           />
         )}
       </div>
