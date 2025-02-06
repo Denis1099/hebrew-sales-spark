@@ -31,11 +31,11 @@ const Index = () => {
             
             {/* Image Side */}
             <div className="flex-1 md:w-1/3 relative">
-              <div className="relative w-64 h-64 mx-auto">
+              <div className="relative w-96 h-96 mx-auto">
                 <img 
                   src="/lovable-uploads/55cc536e-3a1e-440c-af10-52c5caea543d.png"
                   alt="Professional mentor"
-                  className="w-full h-full object-cover"
+                  className="w-full h-full object-cover border-4 border-primary/30 rounded-2xl transition-all duration-300 hover:border-primary hover:scale-105"
                 />
               </div>
             </div>
@@ -106,7 +106,7 @@ const Index = () => {
       {/* WhatsApp Button */}
       <div className="fixed bottom-6 right-6 z-50">
         <Button 
-          className="rounded-full w-20 h-20 bg-[#25D366] hover:bg-[#20BA5C] shadow-lg flex items-center justify-center"
+          className="rounded-full w-16 h-16 bg-[#25D366] hover:bg-[#20BA5C] shadow-lg flex items-center justify-center"
           onClick={() => {/* WhatsApp link will be added later */}}
         >
           <MessageCircle className="w-12 h-12 text-white" />
