@@ -1,6 +1,6 @@
 import { ConsultationForm } from "@/components/ConsultationForm";
 import { FeatureCard } from "@/components/FeatureCard";
-import { MessageCircle } from "lucide-react";
+import { MessageCircle, ClipboardList, Target, LineChart } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
 const Index = () => {
