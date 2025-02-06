@@ -38,7 +38,7 @@ const ResultsSection = () => {
           <div className="text-center p-8 rounded-2xl bg-white/80 backdrop-blur-sm shadow-lg">
             <h3 className="text-2xl font-playfair font-bold text-primary mb-4">שיפור באחוזי סגירה</h3>
             <p className="text-4xl font-bold text-accent">
-              <AnimatedNumber end={20} suffix="%" />
+              <AnimatedNumber end={30} suffix="%" prefix="+" />
             </p>
             <p className="mt-2 text-gray-600">בממוצע אצל הלקוחות שלנו</p>
           </div>
@@ -46,9 +46,9 @@ const ResultsSection = () => {
           <div className="text-center p-8 rounded-2xl bg-white/80 backdrop-blur-sm shadow-lg">
             <h3 className="text-2xl font-playfair font-bold text-primary mb-4">הכנסות נוספות ללקוחות</h3>
             <p className="text-4xl font-bold text-accent">
-              <AnimatedNumber end={500000} prefix="₪" />
+              <AnimatedNumber end={100} suffix="%" prefix="+" />
             </p>
-            <p className="mt-2 text-gray-600">סך הכל הכנסות נוספות</p>
+            <p className="mt-2 text-gray-600">בממוצע בהכנסות העסק</p>
           </div>
         </div>
       </div>

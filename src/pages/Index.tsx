@@ -1,5 +1,6 @@
 import { ConsultationForm } from "@/components/ConsultationForm";
 import { FeatureCard } from "@/components/FeatureCard";
+import ResultsSection from "@/components/ResultsSection";
 import { MessageCircle, ClipboardList, Target, LineChart } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
@@ -43,6 +44,10 @@ const Index = () => {
         </div>
       </section>
 
+      {/* Results Section */}
+      <ResultsSection />
+
+      {/* Features Section */}
       <section className="py-20 bg-secondary/10">
         <div className="container mx-auto px-4">
           <h2 className="text-3xl font-bold text-center mb-12 text-primary">אז איך זה נראה?</h2>
@@ -108,7 +113,7 @@ const Index = () => {
           className="rounded-full w-16 h-16 bg-accent hover:bg-accent/90 shadow-lg flex items-center justify-center"
           onClick={() => {/* WhatsApp link will be added later */}}
         >
-          <MessageCircle className="w-16 h-16 text-white" />
+          <MessageCircle className="w-8 h-8 text-white" />
         </Button>
       </div>
     </div>
