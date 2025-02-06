@@ -45,7 +45,7 @@ export const ConsultationForm = ({ isCompact = false }: ConsultationFormProps) =
         />
         {!isCompact && (
           <Input
-            as="textarea"
+            type="text"
             placeholder="קצת על עצמך.."
             value={formData.about}
             onChange={(e) => setFormData({ ...formData, about: e.target.value })}
@@ -53,12 +53,19 @@ export const ConsultationForm = ({ isCompact = false }: ConsultationFormProps) =
           />
         )}
       </div>
-      <div className="mt-4">
+      <div className="mt-4 space-y-3">
         <Button 
           type="submit" 
           className="w-full rounded-full bg-primary text-white hover:bg-primary/90"
         >
           בוא נדבר!
+        </Button>
+        <Button 
+          type="button"
+          onClick={() => window.open("#", "_blank")} // WhatsApp group link will be added later
+          className="w-full rounded-full bg-[#25D366] text-white hover:bg-[#20BA5C]"
+        >
+          הצטרף לקבוצת הווצאפ שלנו
         </Button>
       </div>
     </form>

@@ -1,16 +1,9 @@
 import { ConsultationForm } from "@/components/ConsultationForm";
 import { FeatureCard } from "@/components/FeatureCard";
-import { Target, TrendingUp, Users, BarChart, ClipboardList, LineChart, HeartHandshake, Trophy, MessageCircle } from "lucide-react";
+import { MessageCircle } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
 const Index = () => {
-  const scrollToAbout = () => {
-    const aboutSection = document.getElementById('about-section');
-    if (aboutSection) {
-      aboutSection.scrollIntoView({ behavior: 'smooth' });
-    }
-  };
-
   return (
     <div className="min-h-screen bg-background font-noto" dir="rtl">
       {/* Hero Section */}
@@ -26,10 +19,10 @@ const Index = () => {
                 רצים לעבר אחוזי סגירה גבוהים יותר
               </h1>
               <h2 className="text-2xl font-extrabold">
-              בין אם אתם רק מתחילים או בעלי ניסיון רב שנים, שיטה זו תעניק לכם את הכלים לחדד את כישוריכם ולשפר את התוצאות שלכם.
+                בין אם אתם רק מתחילים או בעלי ניסיון רב שנים, שיטה זו תעניק לכם את הכלים לחדד את כישוריכם ולשפר את התוצאות שלכם.
               </h2>
               <p className="text-lg text-text">
-              אימון מכירות אישי ומקצועי ברמה הגבוהה ביותר: הצטרפו עכשיו והתחילו למכור יותר.
+                אימון מכירות אישי ומקצועי ברמה הגבוהה ביותר: הצטרפו עכשיו והתחילו למכור יותר.
               </p>
               <div className="max-w-2xl mx-auto">
                 <ConsultationForm isCompact={true} />
@@ -40,7 +33,7 @@ const Index = () => {
             <div className="flex-1 md:w-1/3 relative">
               <div className="relative w-64 h-64 mx-auto overflow-hidden rounded-full border-4 border-primary/20">
                 <img 
-                  src="https://images.unsplash.com/photo-1581092795360-fd1ca04f0952"
+                  src="/lovable-uploads/55cc536e-3a1e-440c-af10-52c5caea543d.png"
                   alt="Professional mentor"
                   className="w-full h-full object-cover"
                 />
@@ -50,7 +43,6 @@ const Index = () => {
         </div>
       </section>
 
-      {/* Problem Section */}
       <section className="py-20 bg-white/50 backdrop-blur-sm">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto space-y-12">
@@ -134,10 +126,10 @@ const Index = () => {
       {/* WhatsApp Button */}
       <div className="fixed bottom-6 right-6 z-50">
         <Button 
-          className="rounded-full w-14 h-14 bg-[#25D366] hover:bg-[#20BA5C] shadow-lg flex items-center justify-center"
+          className="rounded-full w-16 h-16 bg-[#25D366] hover:bg-[#20BA5C] shadow-lg flex items-center justify-center"
           onClick={() => {/* WhatsApp link will be added later */}}
         >
-          <MessageCircle className="w-6 h-6 text-white" />
+          <MessageCircle className="w-8 h-8 text-white" />
         </Button>
       </div>
     </div>
