@@ -12,7 +12,7 @@ const Index = () => {
           <div className="flex flex-col-reverse md:flex-row items-center gap-8">
             {/* Content Side */}
             <div className="flex-1 space-y-6 text-center">
-              <div className="text-accent text-xl">
+              <div className="text-accent text-xl font-bold">
                  ניר בינימין מציג:
               </div>
               <h1 className="text-4xl md:text-5xl font-extrabold text-primary leading-tight">
@@ -109,7 +109,7 @@ const Index = () => {
           className="rounded-full w-16 h-16 bg-[#25D366] hover:bg-[#20BA5C] shadow-lg flex items-center justify-center"
           onClick={() => {/* WhatsApp link will be added later */}}
         >
-          <MessageCircle className="w-12 h-12 text-white" />
+          <MessageCircle className="w-14 h-14 text-white" />
         </Button>
       </div>
     </div>
