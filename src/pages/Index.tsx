@@ -16,7 +16,7 @@ const Index = () => {
                  ניר בינימין מציג:
               </div>
               <h1 className="text-4xl md:text-5xl font-extrabold text-primary leading-tight">
-                רצים לעבר אחוזי סגירה גבוהים יותר
+                רצים אל עבר אחוזי סגירה גבוהים יותר
               </h1>
               <h2 className="text-2xl font-extrabold">
                 בין אם אתם רק מתחילים או בעלי ניסיון רב שנים, שיטה זו תעניק לכם את הכלים לחדד את כישוריכם ולשפר את התוצאות שלכם.
@@ -43,7 +43,6 @@ const Index = () => {
         </div>
       </section>
 
-      {/* Service Section */}
       <section className="py-20 bg-secondary/10">
         <div className="container mx-auto px-4">
           <h2 className="text-3xl font-bold text-center mb-12 text-primary">אז איך זה נראה?</h2>
@@ -95,7 +94,7 @@ const Index = () => {
         <div className="container mx-auto px-4">
           <div className="max-w-2xl mx-auto text-center space-y-8">
             <h2 className="text-3xl font-bold text-primary">הגיע הזמן להפסיק לפחד ממכירות ולהתחיל למכור יותר!</h2>
-            <p className="text-xl text-accent">צרו קשר עוד היום ונתחיל במסע שלכם להצלחה במכירות!</p>
+            <p className="text-xl text-accent font-bold">צרו קשר עוד היום ונתחיל במסע שלכם להצלחה במכירות!</p>
             <div className="max-w-md mx-auto">
               <ConsultationForm />
             </div>
@@ -106,10 +105,10 @@ const Index = () => {
       {/* WhatsApp Button */}
       <div className="fixed bottom-6 right-6 z-50">
         <Button 
-          className="rounded-full w-16 h-16 bg-[#25D366] hover:bg-[#20BA5C] shadow-lg flex items-center justify-center"
+          className="rounded-full w-16 h-16 bg-accent hover:bg-accent/90 shadow-lg flex items-center justify-center"
           onClick={() => {/* WhatsApp link will be added later */}}
         >
-          <MessageCircle className="w-14 h-14 text-white" />
+          <MessageCircle className="w-16 h-16 text-white" />
         </Button>
       </div>
     </div>

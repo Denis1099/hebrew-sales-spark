@@ -63,7 +63,7 @@ export const ConsultationForm = ({ isCompact = false }: ConsultationFormProps) =
         <Button 
           type="button"
           onClick={() => window.open("#", "_blank")} // WhatsApp group link will be added later
-          className="w-full rounded-full bg-[#25D366] text-white hover:bg-[#20BA5C]"
+          className="w-full rounded-full bg-accent text-white hover:bg-accent/90"
         >
           הצטרף לקבוצת הווצאפ שלנו
         </Button>
