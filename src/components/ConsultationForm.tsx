@@ -55,20 +55,22 @@ export const ConsultationForm = ({ isCompact = false }: ConsultationFormProps) =
           />
         )}
       </div>
-      <div className="mt-4 space-y-3">
-        <Button 
-          type="submit" 
-          className="w-full rounded-full bg-primary text-white hover:bg-primary/90"
-        >
-          בוא נדבר!
-        </Button>
-        <Button 
-          type="button"
-          onClick={() => window.open("#", "_blank")}
-          className="w-full rounded-full bg-accent text-white hover:bg-accent/90"
-        >
-          הצטרף לקבוצת הווצאפ שלנו
-        </Button>
+      <div className="mt-4">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+          <Button 
+            type="submit" 
+            className="w-full rounded-full bg-primary text-white hover:bg-primary/90"
+          >
+            בוא נדבר!
+          </Button>
+          <Button 
+            type="button"
+            onClick={() => window.open("#", "_blank")}
+            className="w-full rounded-full bg-accent text-white hover:bg-accent/90"
+          >
+            הצטרף לקבוצת הווצאפ שלנו
+          </Button>
+        </div>
       </div>
     </form>
   );

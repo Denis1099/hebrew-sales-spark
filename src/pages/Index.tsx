@@ -8,7 +8,7 @@ const Index = () => {
   return (
     <div className="min-h-screen bg-background font-noto" dir="rtl">
       {/* Hero Section */}
-      <section className="pt-20 pb-8 relative">
+      <section className="pt-20 pb-4 relative">
         <div className="container mx-auto px-4">
           <div className="flex flex-col-reverse md:flex-row items-center gap-8">
             {/* Content Side */}
