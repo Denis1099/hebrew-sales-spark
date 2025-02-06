@@ -108,7 +108,7 @@ const Index = () => {
           className="rounded-full w-16 h-16 bg-accent hover:bg-accent/90 shadow-lg flex items-center justify-center"
           onClick={() => {/* WhatsApp link will be added later */}}
         >
-          <MessageCircle className="w-20 h-20 text-white" />
+          <MessageCircle className="w-16 h-16 text-white" />
         </Button>
       </div>
     </div>

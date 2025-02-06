@@ -50,7 +50,6 @@ export const ConsultationForm = ({ isCompact = false }: ConsultationFormProps) =
             value={formData.about}
             onChange={(e) => setFormData({ ...formData, about: e.target.value })}
             className="text-right rounded-lg bg-white/90 border-none shadow-sm min-h-[100px] align-top pt-3"
-            style={{ paddingTop: '1rem', verticalAlign: 'top' }}
           />
         )}
       </div>
