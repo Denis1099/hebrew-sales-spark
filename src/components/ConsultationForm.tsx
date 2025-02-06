@@ -26,27 +26,29 @@ export const ConsultationForm = ({ isCompact = false }: ConsultationFormProps) =
 
   return (
     <form onSubmit={handleSubmit} className="w-full" dir="rtl">
-      <div className={`space-y-4 ${isCompact ? 'md:space-y-0 md:flex md:gap-4' : ''}`}>
-        <Input
-          type="text"
-          placeholder="שם מלא"
-          value={formData.name}
-          onChange={(e) => setFormData({ ...formData, name: e.target.value })}
-          required
-          className="text-right rounded-full bg-white/90 border-none shadow-sm"
-        />
-        <Input
-          type="tel"
-          placeholder="טלפון"
-          value={formData.phone}
-          onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
-          required
-          className="text-right rounded-full bg-white/90 border-none shadow-sm"
-        />
+      <div className="space-y-4">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+          <Input
+            type="text"
+            placeholder="שם מלא"
+            value={formData.name}
+            onChange={(e) => setFormData({ ...formData, name: e.target.value })}
+            required
+            className="text-right rounded-full bg-white/90 border-none shadow-sm"
+          />
+          <Input
+            type="tel"
+            placeholder="טלפון"
+            value={formData.phone}
+            onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
+            required
+            className="text-right rounded-full bg-white/90 border-none shadow-sm"
+          />
+        </div>
         {!isCompact && (
           <Input
             type="text"
-            placeholder="קצת על עצמך.."
+            placeholder="ספר לי קצת על העסק שלך..."
             value={formData.about}
             onChange={(e) => setFormData({ ...formData, about: e.target.value })}
             className="text-right rounded-lg bg-white/90 border-none shadow-sm min-h-[100px] align-top pt-3 placeholder:align-top"
@@ -62,7 +64,7 @@ export const ConsultationForm = ({ isCompact = false }: ConsultationFormProps) =
         </Button>
         <Button 
           type="button"
-          onClick={() => window.open("#", "_blank")} // WhatsApp group link will be added later
+          onClick={() => window.open("#", "_blank")}
           className="w-full rounded-full bg-accent text-white hover:bg-accent/90"
         >
           הצטרף לקבוצת הווצאפ שלנו

@@ -8,7 +8,7 @@ const Index = () => {
   return (
     <div className="min-h-screen bg-background font-noto" dir="rtl">
       {/* Hero Section */}
-      <section className="pt-20 pb-20 relative">
+      <section className="pt-20 pb-8 relative">
         <div className="container mx-auto px-4">
           <div className="flex flex-col-reverse md:flex-row items-center gap-8">
             {/* Content Side */}
@@ -33,18 +33,22 @@ const Index = () => {
             {/* Image Side */}
             <div className="flex-1 md:w-1/3 relative">
               <div className="relative w-96 h-96 mx-auto">
-                <img 
-                  src="/lovable-uploads/55cc536e-3a1e-440c-af10-52c5caea543d.png"
-                  alt="Professional mentor"
-                  className="w-full h-full object-cover border-4 border-primary/30 rounded-2xl transition-all duration-300 hover:border-primary hover:scale-105"
-                />
+                <picture>
+                  <source media="(min-width: 1024px)" srcSet="/lovable-uploads/sales-hero-desktop.webp" />
+                  <source media="(min-width: 768px)" srcSet="/lovable-uploads/sales-hero-tablet.webp" />
+                  <img 
+                    src="/lovable-uploads/sales-hero-mobile.webp"
+                    alt="Professional mentor"
+                    className="w-full h-full object-cover border-4 border-primary/30 rounded-2xl transition-all duration-300 hover:border-primary hover:scale-105"
+                  />
+                </picture>
               </div>
             </div>
           </div>
         </div>
       </section>
 
-      {/* Results Section */}
+      {/* Results Section - Moved up */}
       <ResultsSection />
 
       {/* Features Section */}
