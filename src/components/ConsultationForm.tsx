@@ -36,7 +36,7 @@ export const ConsultationForm = ({ isCompact = false }: ConsultationFormProps) =
             value={formData.name}
             onChange={(e) => setFormData({ ...formData, name: e.target.value })}
             required
-            className="text-right rounded-full bg-white/90 border-none shadow-sm"
+            className="text-right rounded-full bg-white/90 border-none shadow-sm h-14 text-lg"
           />
           <Input
             type="tel"
@@ -44,7 +44,7 @@ export const ConsultationForm = ({ isCompact = false }: ConsultationFormProps) =
             value={formData.phone}
             onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
             required
-            className="text-right rounded-full bg-white/90 border-none shadow-sm"
+            className="text-right rounded-full bg-white/90 border-none shadow-sm h-14 text-lg"
           />
         </div>
         {!isCompact && (
@@ -52,7 +52,7 @@ export const ConsultationForm = ({ isCompact = false }: ConsultationFormProps) =
             placeholder="ספר לי קצת על העסק שלך..."
             value={formData.about}
             onChange={(e) => setFormData({ ...formData, about: e.target.value })}
-            className="text-right rounded-lg bg-white/90 border-none shadow-sm min-h-[100px] resize-none"
+            className="text-right rounded-lg bg-white/90 border-none shadow-sm min-h-[100px] resize-none text-lg"
           />
         )}
       </div>
@@ -60,14 +60,14 @@ export const ConsultationForm = ({ isCompact = false }: ConsultationFormProps) =
         <div className="flex flex-col md:flex-row gap-4 justify-center">
           <Button 
             type="submit" 
-            className="h-12 px-8 rounded-full bg-primary text-white hover:bg-primary/90"
+            className="h-14 px-10 rounded-full bg-primary text-white hover:bg-primary/90 text-lg"
           >
             בואו נדבר! 📥
           </Button>
           <Button 
             type="button"
-            onClick={() => window.open("#", "_blank")}
-            className="h-12 px-8 rounded-full bg-accent text-white hover:bg-accent/90"
+            onClick={() => window.open("https://chat.whatsapp.com/LTZJPS8vUqo88VPCBQVeXQ", "_blank")}
+            className="h-14 px-10 rounded-full bg-accent text-white hover:bg-accent/90 text-lg"
           >
             הצטרפו לקבוצת הווצאפ שלנו 💬
           </Button>
