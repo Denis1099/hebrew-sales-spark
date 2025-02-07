@@ -133,10 +133,10 @@ const Index = () => {
       {/* WhatsApp Button */}
       <div className="fixed bottom-6 right-6 z-50">
         <Button 
-          className="rounded-full w-16 h-16 bg-accent hover:bg-accent/90 shadow-lg flex items-center justify-center"
+          className="rounded-full w-20 h-20 bg-accent hover:bg-accent/90 shadow-lg flex items-center justify-center"
           onClick={() => window.open("https://wa.me/972526622750", "_blank")}
         >
-          <MessageCircle className="w-8 h-8 text-white" />
+          <MessageCircle className="w-12 h-12 text-white" />
         </Button>
       </div>
     </div>
