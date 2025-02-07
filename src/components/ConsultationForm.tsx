@@ -62,14 +62,14 @@ export const ConsultationForm = ({ isCompact = false }: ConsultationFormProps) =
             type="submit" 
             className="h-12 px-8 rounded-full bg-primary text-white hover:bg-primary/90"
           >
-            בואו נדבר!
+            בואו נדבר! 📥
           </Button>
           <Button 
             type="button"
             onClick={() => window.open("#", "_blank")}
             className="h-12 px-8 rounded-full bg-accent text-white hover:bg-accent/90"
           >
-            הצטרפו לקבוצת הווצאפ שלנו
+            הצטרפו לקבוצת הווצאפ שלנו 💬
           </Button>
         </div>
       </div>

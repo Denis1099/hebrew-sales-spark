@@ -7,7 +7,7 @@ import { Button } from "@/components/ui/button";
 
 const Index = () => {
   return (
-    <div className="min-h-screen bg-background font-noto" dir="rtl">
+    <div className="min-h-screen bg-secondary/10 font-noto" dir="rtl">
       {/* Hero Section */}
       <section className="pt-6 md:pt-16 md:pb-2 relative">
         <div className="container mx-auto px-2 md:px-8">
@@ -19,7 +19,7 @@ const Index = () => {
               </div>
               <h1 className="text-4xl md:text-5xl font-extrabold text-primary leading-tight order-2">
                 רצים אל עבר אחוזי סגירה גבוהים יותר
-              </h1>
+                </h1>
               
               {/* Image moved here for mobile */}
               <div className="md:hidden order-3">
@@ -68,7 +68,7 @@ const Index = () => {
       <ResultsSection />
 
       {/* Features Section */}
-      <section className="py-16 bg-secondary/10">
+      <section className="py-16 bg-white/50">
         <div className="container mx-auto px-4">
           <h2 className="text-3xl font-bold text-center mb-12 text-primary">אז איך זה נראה?</h2>
           <div className="grid md:grid-cols-3 gap-8 max-w-4xl mx-auto">
@@ -92,7 +92,7 @@ const Index = () => {
       </section>
 
       {/* About Section */}
-      <section id="about-section" className="py-20 bg-white/50">
+      <section id="about-section" className="py-20 bg-secondary/10">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto space-y-8 text-center">
             <h2 className="text-3xl font-bold text-primary mb-12">קצת על עצמי</h2>
