@@ -1,6 +1,7 @@
 import { ConsultationForm } from "@/components/ConsultationForm";
 import { FeatureCard } from "@/components/FeatureCard";
 import ResultsSection from "@/components/ResultsSection";
+import TestimonialsSection from "@/components/TestimonialsSection";
 import { MessageCircle, ClipboardList, Target, LineChart } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
@@ -10,28 +11,43 @@ const Index = () => {
       {/* Hero Section */}
       <section className="pt-20 pb-4 relative">
         <div className="container mx-auto px-4">
-          <div className="flex flex-col-reverse md:flex-row items-center gap-8">
+          <div className="flex flex-col md:flex-row items-center gap-8">
             {/* Content Side */}
             <div className="flex-1 space-y-6 text-center">
-              <div className="text-accent text-xl font-bold">
-                 ניר בינימין מציג:
+              <div className="text-accent text-xl font-bold order-1">
+                ניר בינימין מציג:
               </div>
-              <h1 className="text-4xl md:text-5xl font-extrabold text-primary leading-tight">
+              <h1 className="text-4xl md:text-5xl font-extrabold text-primary leading-tight order-2">
                 רצים אל עבר אחוזי סגירה גבוהים יותר
               </h1>
-              <h2 className="text-2xl font-extrabold">
+              
+              {/* Image moved here for mobile */}
+              <div className="md:hidden order-3">
+                <div className="relative w-72 h-72 mx-auto">
+                  <picture>
+                    <source media="(min-width: 768px)" srcSet="/lovable-uploads/sales-hero-tablet.webp" />
+                    <img 
+                      src="/lovable-uploads/sales-hero-mobile.webp"
+                      alt="Professional mentor"
+                      className="w-full h-full object-cover border-4 border-primary/30 rounded-2xl transition-all duration-300 hover:border-primary hover:scale-105"
+                    />
+                  </picture>
+                </div>
+              </div>
+
+              <h2 className="text-2xl font-extrabold order-4">
                 בין אם אתם רק מתחילים או בעלי ניסיון רב שנים, שיטה זו תעניק לכם את הכלים לחדד את כישוריכם ולשפר את התוצאות שלכם.
               </h2>
-              <p className="text-lg text-text">
+              <p className="text-lg text-text order-5">
                 אימון מכירות אישי ומקצועי ברמה הגבוהה ביותר: הצטרפו עכשיו והתחילו למכור יותר.
               </p>
-              <div className="max-w-2xl mx-auto">
+              <div className="max-w-2xl mx-auto order-6">
                 <ConsultationForm isCompact={true} />
               </div>
             </div>
             
-            {/* Image Side */}
-            <div className="flex-1 md:w-1/3 relative">
+            {/* Image Side - Hidden on mobile */}
+            <div className="hidden md:block flex-1 md:w-1/3 relative">
               <div className="relative w-96 h-96 mx-auto">
                 <picture>
                   <source media="(min-width: 1024px)" srcSet="/lovable-uploads/sales-hero-desktop.webp" />
@@ -48,7 +64,7 @@ const Index = () => {
         </div>
       </section>
 
-      {/* Results Section - Moved up */}
+      {/* Results Section */}
       <ResultsSection />
 
       {/* Features Section */}
@@ -97,6 +113,9 @@ const Index = () => {
           </div>
         </div>
       </section>
+
+      {/* Testimonials Section */}
+      <TestimonialsSection />
 
       {/* Closing Section */}
       <section className="py-20 bg-secondary/10">

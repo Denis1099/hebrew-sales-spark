@@ -1,8 +1,10 @@
+
 interface TestimonialCardProps {
   name: string;
   role: string;
   company: string;
   content: string;
+  imageUrl: string;
 }
 
 export const TestimonialCard = ({
@@ -10,15 +12,27 @@ export const TestimonialCard = ({
   role,
   company,
   content,
+  imageUrl,
 }: TestimonialCardProps) => {
   return (
-    <div className="bg-white p-6 rounded-lg shadow-sm border border-gray-100 text-right">
-      <p className="text-gray-700 mb-4">{content}</p>
-      <div>
-        <p className="font-bold">{name}</p>
-        <p className="text-sm text-gray-600">
-          {role}, {company}
-        </p>
+    <div className="bg-white/80 backdrop-blur-sm p-6 rounded-2xl shadow-lg hover:shadow-xl transition-shadow duration-300">
+      <div className="flex flex-col md:flex-row gap-6 items-start">
+        <div className="md:order-2 shrink-0">
+          <img
+            src={imageUrl}
+            alt={`תמונה של ${name}`}
+            className="w-20 h-20 rounded-full object-cover border-2 border-primary/20"
+          />
+        </div>
+        <div className="md:order-1 flex-1 space-y-4">
+          <p className="text-lg text-gray-700">{content}</p>
+          <div>
+            <p className="font-bold text-primary">{name}</p>
+            <p className="text-sm text-accent">
+              {role}, {company}
+            </p>
+          </div>
+        </div>
       </div>
     </div>
   );
