@@ -48,7 +48,7 @@ const Index = () => {
             
             {/* Image Side - Hidden on mobile */}
             <div className="hidden md:block flex-1 md:w-1/3 relative">
-              <div className="relative w-96 h-96 mx-auto">
+              <div className="relative w-[400px] h-[400px] mx-auto">
                 <picture>
                   <source media="(min-width: 1024px)" srcSet="/lovable-uploads/sales-hero-desktop.webp" />
                   <source media="(min-width: 768px)" srcSet="/lovable-uploads/sales-hero-tablet.webp" />

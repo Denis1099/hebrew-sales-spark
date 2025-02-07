@@ -1,3 +1,4 @@
+
 import { LucideIcon } from "lucide-react";
 
 interface FeatureCardProps {
@@ -14,8 +15,8 @@ export const FeatureCard = ({ title, description, Icon }: FeatureCardProps) => {
           <Icon className="h-6 w-6 text-primary" />
         </div>
       </div>
-      <h3 className="text-xl font-extrabold mb-2 text-right text-primary">{title}</h3>
-      <p className="text-gray-600 text-right">{description}</p>
+      <h3 className="text-xl font-extrabold mb-2 text-center text-primary">{title}</h3>
+      <p className="text-gray-600 text-center">{description}</p>
     </div>
   );
 };

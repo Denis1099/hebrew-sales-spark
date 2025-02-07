@@ -1,6 +1,8 @@
+
 import { useState } from "react";
 import { Button } from "./ui/button";
 import { Input } from "./ui/input";
+import { Textarea } from "./ui/textarea";
 import { useToast } from "@/hooks/use-toast";
 
 interface ConsultationFormProps {
@@ -46,27 +48,26 @@ export const ConsultationForm = ({ isCompact = false }: ConsultationFormProps) =
           />
         </div>
         {!isCompact && (
-          <Input
-            type="text"
+          <Textarea
             placeholder="ספר לי קצת על העסק שלך..."
             value={formData.about}
             onChange={(e) => setFormData({ ...formData, about: e.target.value })}
-            className="text-right rounded-lg bg-white/90 border-none shadow-sm min-h-[100px] align-top pt-3 placeholder:align-top"
+            className="text-right rounded-lg bg-white/90 border-none shadow-sm min-h-[100px] resize-none"
           />
         )}
       </div>
       <div className="mt-4">
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+        <div className="flex flex-col md:flex-row gap-4 justify-center">
           <Button 
             type="submit" 
-            className="w-full rounded-full bg-primary text-white hover:bg-primary/90"
+            className="h-12 px-8 rounded-full bg-primary text-white hover:bg-primary/90"
           >
             בואו נדבר!
           </Button>
           <Button 
             type="button"
             onClick={() => window.open("#", "_blank")}
-            className="w-full rounded-full bg-accent text-white hover:bg-accent/90"
+            className="h-12 px-8 rounded-full bg-accent text-white hover:bg-accent/90"
           >
             הצטרפו לקבוצת הווצאפ שלנו
           </Button>
