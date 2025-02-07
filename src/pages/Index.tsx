@@ -9,13 +9,13 @@ const Index = () => {
   return (
     <div className="min-h-screen bg-background font-noto" dir="rtl">
       {/* Hero Section */}
-      <section className="pt-20 pb-4 relative">
-        <div className="container mx-auto px-4">
+      <section className="pt-6 md:pt-16 md:pb-2 relative">
+        <div className="container mx-auto px-2 md:px-8">
           <div className="flex flex-col md:flex-row items-center gap-8">
             {/* Content Side */}
-            <div className="flex-1 space-y-6 text-center">
+            <div className="flex-1 space-y-6 md:space-y-10 text-center">
               <div className="text-accent text-xl font-bold order-1">
-                ניר בינימין מציג:
+                ניר בנימין מציג:
               </div>
               <h1 className="text-4xl md:text-5xl font-extrabold text-primary leading-tight order-2">
                 רצים אל עבר אחוזי סגירה גבוהים יותר
@@ -28,7 +28,7 @@ const Index = () => {
                     <source media="(min-width: 768px)" srcSet="/lovable-uploads/sales-hero-tablet.webp" />
                     <img 
                       src="/lovable-uploads/sales-hero-mobile.webp"
-                      alt="Professional mentor"
+                      alt="תמונה של ניר בנימין"
                       className="w-full h-full object-cover border-4 border-primary/30 rounded-2xl transition-all duration-300 hover:border-primary hover:scale-105"
                     />
                   </picture>
@@ -54,7 +54,7 @@ const Index = () => {
                   <source media="(min-width: 768px)" srcSet="/lovable-uploads/sales-hero-tablet.webp" />
                   <img 
                     src="/lovable-uploads/sales-hero-mobile.webp"
-                    alt="Professional mentor"
+                    alt="תמונה של ניר בנימין"
                     className="w-full h-full object-cover border-4 border-primary/30 rounded-2xl transition-all duration-300 hover:border-primary hover:scale-105"
                   />
                 </picture>
@@ -68,7 +68,7 @@ const Index = () => {
       <ResultsSection />
 
       {/* Features Section */}
-      <section className="py-20 bg-secondary/10">
+      <section className="py-16 bg-secondary/10">
         <div className="container mx-auto px-4">
           <h2 className="text-3xl font-bold text-center mb-12 text-primary">אז איך זה נראה?</h2>
           <div className="grid md:grid-cols-3 gap-8 max-w-4xl mx-auto">

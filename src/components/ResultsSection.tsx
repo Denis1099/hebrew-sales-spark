@@ -32,7 +32,7 @@ const AnimatedNumber = ({ end, duration = 2000, prefix = '', suffix = '' }) => {
 
 const ResultsSection = () => {
   return (
-    <section className="py-16 bg-background">
+    <section className="py-12 bg-background">
       <div className="container mx-auto px-4">
         <div className="grid md:grid-cols-2 gap-8">
           <div className="text-center p-8 rounded-2xl bg-white/80 backdrop-blur-sm shadow-lg">
