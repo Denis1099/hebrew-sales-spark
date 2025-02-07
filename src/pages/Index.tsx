@@ -131,12 +131,12 @@ const Index = () => {
       </section>
 
       {/* WhatsApp Button */}
-      <div className="fixed bottom-6 right-6 z-50">
+      <div className="fixed bottom-6 left-6 z-50">
         <Button 
-          className="rounded-full w-20 h-20 bg-accent hover:bg-accent/90 shadow-lg flex items-center justify-center"
+          className="rounded-full w-24 h-24 bg-accent hover:bg-accent/90 shadow-lg flex items-center justify-center"
           onClick={() => window.open("https://wa.me/972526622750", "_blank")}
         >
-          <MessageCircle className="w-12 h-12 text-white" />
+          <MessageCircle className="w-14 h-14 text-white" />
         </Button>
       </div>
     </div>

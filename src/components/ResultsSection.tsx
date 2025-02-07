@@ -37,7 +37,7 @@ const ResultsSection = () => {
       <div className="container mx-auto px-4">
         <div className="grid md:grid-cols-3 gap-8 max-w-4xl mx-auto">
           <div className="text-center p-8 rounded-2xl bg-white/80 backdrop-blur-sm shadow-lg">
-            <h3 className="text-2xl font-playfair font-bold text-primary mb-4">שיפור באחוזי סגירה</h3>
+            <h3 className="text-2xl font-playfair font-bold text-primary mb-4">שיפור באחוזי<br />סגירה</h3>
             <p className="text-4xl font-bold text-accent">
               <div className="flex flex-row-reverse items-center justify-center">
                 <span dir="ltr">
@@ -49,7 +49,7 @@ const ResultsSection = () => {
           </div>
           
           <div className="text-center p-8 rounded-2xl bg-white/80 backdrop-blur-sm shadow-lg">
-            <h3 className="text-2xl font-playfair font-bold text-primary mb-4">הכנסות נוספות ללקוחות</h3>
+            <h3 className="text-2xl font-playfair font-bold text-primary mb-4">הכנסות נוספות<br />ללקוחות</h3>
             <p className="text-4xl font-bold text-accent">
               <div className="flex flex-row-reverse items-center justify-center">
                 <span dir="ltr">
@@ -61,7 +61,7 @@ const ResultsSection = () => {
           </div>
 
           <div className="text-center p-8 rounded-2xl bg-white/80 backdrop-blur-sm shadow-lg">
-            <h3 className="text-2xl font-playfair font-bold text-primary mb-4">שביעות רצון לקוחות</h3>
+            <h3 className="text-2xl font-playfair font-bold text-primary mb-4">שביעות רצון<br />לקוחות</h3>
             <p className="text-4xl font-bold text-accent">
               <div className="flex flex-row-reverse items-center justify-center">
                 <span dir="ltr">
