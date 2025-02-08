@@ -2,14 +2,14 @@ import { ConsultationForm } from "@/components/ConsultationForm";
 import { FeatureCard } from "@/components/FeatureCard";
 import ResultsSection from "@/components/ResultsSection";
 import TestimonialsSection from "@/components/TestimonialsSection";
-import { MessageCircle, ClipboardList, Target, LineChart } from "lucide-react";
+import { MessageCircleMore, ClipboardList, Target, LineChart } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
 const Index = () => {
   return (
     <div className="min-h-screen bg-secondary/10 font-noto" dir="rtl">
       {/* Hero Section */}
-      <section className="pt-6 md:pt-16 md:pb-2 relative">
+      <section className="pt-6 md:pt-8 md:pb-2 relative">
         <div className="container mx-auto px-2 md:px-8">
           <div className="flex flex-col md:flex-row items-center gap-8">
             {/* Content Side */}
@@ -131,14 +131,16 @@ const Index = () => {
       </section>
 
       {/* WhatsApp Button */}
-      <div className="fixed bottom-6 left-6 z-50">
-        <Button 
-          className="rounded-full w-24 h-24 bg-accent hover:bg-accent/90 shadow-lg flex items-center justify-center"
-          onClick={() => window.open("https://wa.me/972526622750", "_blank")}
-        >
-          <MessageCircle className="w-14 h-14 text-white" />
-        </Button>
-      </div>
+      <div className="fixed bottom-6 right-6 z-50">
+  <Button 
+    className="rounded-full w-20 h-20 bg-[#25D366] hover:bg-[#25D366]/90 shadow-lg flex items-center justify-center"
+    onClick={() => window.open("https://wa.me/972526622750", "_blank")}
+  >
+    <MessageCircleMore 
+  className="text-white transform scale-150"
+/>
+  </Button>
+</div>
     </div>
   );
 };

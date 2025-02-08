@@ -52,7 +52,7 @@ export const ConsultationForm = ({ isCompact = false }: ConsultationFormProps) =
             placeholder="ספר לי קצת על העסק שלך..."
             value={formData.about}
             onChange={(e) => setFormData({ ...formData, about: e.target.value })}
-            className="text-right rounded-lg bg-white/90 border-none shadow-sm min-h-[100px] resize-none text-lg"
+            className="text-right rounded-lg bg-white/90 border-none shadow-sm min-h-[100px] resize-none text-md"
           />
         )}
       </div>
