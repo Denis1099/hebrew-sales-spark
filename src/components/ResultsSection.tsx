@@ -1,10 +1,12 @@
 
-import { useEffect, useState } from 'react';
+import { useEffect, useState, useRef } from 'react';
 
-const AnimatedNumber = ({ end, duration = 2000, prefix = '', suffix = '' }) => {
+const AnimatedNumber = ({ end, duration = 2000, prefix = '', suffix = '', shouldAnimate = false }) => {
   const [count, setCount] = useState(0);
 
   useEffect(() => {
+    if (!shouldAnimate) return;
+
     let startTime: number | null = null;
     let animationFrame: number;
 
@@ -22,7 +24,7 @@ const AnimatedNumber = ({ end, duration = 2000, prefix = '', suffix = '' }) => {
     animationFrame = requestAnimationFrame(animate);
 
     return () => cancelAnimationFrame(animationFrame);
-  }, [end, duration]);
+  }, [end, duration, shouldAnimate]);
 
   return (
     <span className="animate-number-flip">
@@ -32,16 +34,43 @@ const AnimatedNumber = ({ end, duration = 2000, prefix = '', suffix = '' }) => {
 };
 
 const ResultsSection = () => {
+  const [isVisible, setIsVisible] = useState(false);
+  const [hasAnimated, setHasAnimated] = useState(false);
+  const sectionRef = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting && !hasAnimated) {
+            setIsVisible(true);
+            setHasAnimated(true);
+            observer.disconnect(); // Ensure animation only happens once
+          }
+        });
+      },
+      {
+        threshold: 0.2, // Trigger when 20% of the section is visible
+      }
+    );
+
+    if (sectionRef.current) {
+      observer.observe(sectionRef.current);
+    }
+
+    return () => observer.disconnect();
+  }, [hasAnimated]);
+
   return (
-    <section className="py-12">
+    <section ref={sectionRef} className="py-12">
       <div className="container mx-auto px-4">
         <div className="grid md:grid-cols-3 gap-8 max-w-4xl mx-auto">
-        <div className="text-center p-8 rounded-2xl bg-white/80 backdrop-blur-sm shadow-lg">
+          <div className="text-center p-8 rounded-2xl bg-white/80 backdrop-blur-sm shadow-lg">
             <h3 className="text-2xl font-playfair font-bold text-primary mb-4">שביעות רצון<br />לקוחות</h3>
             <p className="text-4xl font-bold text-accent">
               <div className="flex flex-row-reverse items-center justify-center">
                 <span dir="ltr">
-                  <AnimatedNumber end={100} suffix="%" />
+                  <AnimatedNumber end={100} suffix="%" shouldAnimate={isVisible} />
                 </span>
               </div>
             </p>
@@ -53,7 +82,7 @@ const ResultsSection = () => {
             <p className="text-4xl font-bold text-accent">
               <div className="flex flex-row-reverse items-center justify-center">
                 <span dir="ltr">
-                  <AnimatedNumber end={30} prefix="+" suffix="%" />
+                  <AnimatedNumber end={30} prefix="+" suffix="%" shouldAnimate={isVisible} />
                 </span>
               </div>
             </p>
@@ -65,14 +94,12 @@ const ResultsSection = () => {
             <p className="text-4xl font-bold text-accent">
               <div className="flex flex-row-reverse items-center justify-center">
                 <span dir="ltr">
-                  <AnimatedNumber end={150} prefix="+" suffix="%" />
+                  <AnimatedNumber end={150} prefix="+" suffix="%" shouldAnimate={isVisible} />
                 </span>
               </div>
             </p>
             <p className="mt-2 text-gray-600">בממוצע בהכנסות העסק</p>
           </div>
-
-          
         </div>
       </div>
     </section>

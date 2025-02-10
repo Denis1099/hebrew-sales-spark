@@ -1,3 +1,4 @@
+
 import { ConsultationForm } from "@/components/ConsultationForm";
 import { FeatureCard } from "@/components/FeatureCard";
 import ResultsSection from "@/components/ResultsSection";
@@ -10,8 +11,8 @@ const Index = () => {
   return (
     <div className="min-h-screen bg-secondary/10 font-noto" dir="rtl">
       {/* Hero Section */}
-      <section className="pt-6 md:pt-8 md:pb-2 relative">
-        <div className="container mx-auto px-2 md:px-8">
+      <section className="h-screen flex items-center relative bg-secondary/10">
+        <div className="container mx-auto px-2 md:px-8 py-6 md:py-8">
           <div className="flex flex-col md:flex-row items-center gap-8">
             <div className="flex-1 space-y-6 md:space-y-10 text-center">
               <div className="text-accent text-xl font-bold order-1">
@@ -19,7 +20,7 @@ const Index = () => {
               </div>
               <h1 className="text-4xl md:text-5xl font-extrabold text-primary leading-tight order-2">
                 רצים אל עבר אחוזי סגירה גבוהים יותר
-                </h1>
+              </h1>
               
               <div className="md:hidden order-3">
                 <div className="relative w-72 h-72 mx-auto">
@@ -38,7 +39,7 @@ const Index = () => {
                 בין אם אתם רק מתחילים או בעלי ניסיון רב שנים, שיטה זו תעניק לכם את הכלים לחדד את כישוריכם ולשפר את התוצאות שלכם.
               </h2>
               <p className="text-lg text-text order-5">
-              קבלו שיחת ייעוץ אישית חינם איתי – וגלו איך להכפיל את אחוזי הסגירה שלכם.
+                קבלו שיחת ייעוץ אישית חינם איתי – וגלו איך להכפיל את אחוזי הסגירה שלכם.
               </p>
               <div className="max-w-2xl mx-auto order-6">
                 <ConsultationForm isCompact={true} />
