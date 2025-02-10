@@ -1,10 +1,8 @@
-
 import { ConsultationForm } from "@/components/ConsultationForm";
-import { FeatureCard } from "@/components/FeatureCard";
 import ResultsSection from "@/components/ResultsSection";
 import TestimonialsSection from "@/components/TestimonialsSection";
 import TimelineSection from "@/components/TimelineSection";
-import { MessageCircleMore, ClipboardList, Target, LineChart } from "lucide-react";
+import { MessageCircleMore } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
 const Index = () => {
@@ -12,10 +10,10 @@ const Index = () => {
     <div className="min-h-screen bg-secondary/10 font-noto" dir="rtl">
       {/* Hero Section */}
       <section className="h-screen flex items-center relative bg-secondary/10">
-        <div className="container mx-auto px-2 md:px-8 py-6 md:py-8">
-          <div className="flex flex-col md:flex-row items-center gap-8">
-            <div className="flex-1 space-y-6 md:space-y-10 text-center">
-              <div className="text-accent text-xl font-bold order-1">
+        <div className="container mx-auto px-2 md:px-8 py-3 md:py-4">
+          <div className="flex flex-col md:flex-row items-center gap-4">
+            <div className="flex-1 space-y-4 md:space-y-6 text-center">
+              <div className="text-accent text-xl font-bold order-1 mb-2">
                 ניר בנימין מציג:
               </div>
               <h1 className="text-4xl md:text-5xl font-extrabold text-primary leading-tight order-2">
@@ -41,7 +39,7 @@ const Index = () => {
               <p className="text-lg text-text order-5">
                 קבלו שיחת ייעוץ אישית חינם איתי – וגלו איך להכפיל את אחוזי הסגירה שלכם.
               </p>
-              <div className="max-w-2xl mx-auto order-6">
+              <div className="max-w-2xl mx-auto order-6 mb-8">
                 <ConsultationForm isCompact={true} />
               </div>
             </div>
@@ -67,29 +65,10 @@ const Index = () => {
       <TimelineSection />
 
       {/* Results Section */}
-      <ResultsSection />
-
-      {/* Features Section */}
-      <section className="py-16 bg-white/50">
+      <section className="py-12 bg-white/5">
         <div className="container mx-auto px-4">
-          <h2 className="text-3xl font-bold text-center mb-12 text-primary">אז איך זה נראה?</h2>
-          <div className="grid md:grid-cols-3 gap-8 max-w-4xl mx-auto">
-            <FeatureCard
-              title="אבחון העסק"
-              description="אבחון ראשוני של צרכי המכירות שלך"
-              Icon={ClipboardList}
-            />
-            <FeatureCard
-              title="בניית תוכנית אישית"
-              description="בניית תכנית אימון אישית ומותאמת"
-              Icon={Target}
-            />
-            <FeatureCard
-              title="ליווי להצלחה"
-              description="בעזרת ליווי, הכוונה, והדרכה של טכניקות מכירה"
-              Icon={LineChart}
-            />
-          </div>
+          <h2 className="text-3xl font-bold text-center mb-12 text-primary">התוצאות מדברות בעד עצמן</h2>
+          <ResultsSection />
         </div>
       </section>
 
@@ -134,15 +113,15 @@ const Index = () => {
 
       {/* WhatsApp Button */}
       <div className="fixed bottom-6 right-6 z-50">
-  <Button 
-    className="rounded-full w-20 h-20 bg-[#25D366] hover:bg-[#25D366]/90 shadow-lg flex items-center justify-center"
-    onClick={() => window.open("https://wa.me/972526622750", "_blank")}
-  >
-    <MessageCircleMore 
-  className="text-white transform scale-150"
-/>
-  </Button>
-</div>
+        <Button 
+          className="rounded-full w-20 h-20 bg-[#25D366] hover:bg-[#25D366]/90 shadow-lg flex items-center justify-center"
+          onClick={() => window.open("https://wa.me/972526622750", "_blank")}
+        >
+          <MessageCircleMore 
+            className="text-white transform scale-150"
+          />
+        </Button>
+      </div>
     </div>
   );
 };
