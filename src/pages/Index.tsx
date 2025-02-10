@@ -2,7 +2,6 @@ import { ConsultationForm } from "@/components/ConsultationForm";
 import { FeatureCard } from "@/components/FeatureCard";
 import ResultsSection from "@/components/ResultsSection";
 import TestimonialsSection from "@/components/TestimonialsSection";
-import TimelineSection from "@/components/TimelineSection";
 import { MessageCircleMore, ClipboardList, Target, LineChart } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
@@ -13,6 +12,7 @@ const Index = () => {
       <section className="pt-6 md:pt-8 md:pb-2 relative">
         <div className="container mx-auto px-2 md:px-8">
           <div className="flex flex-col md:flex-row items-center gap-8">
+            {/* Content Side */}
             <div className="flex-1 space-y-6 md:space-y-10 text-center">
               <div className="text-accent text-xl font-bold order-1">
                 ניר בנימין מציג:
@@ -21,6 +21,7 @@ const Index = () => {
                 רצים אל עבר אחוזי סגירה גבוהים יותר
                 </h1>
               
+              {/* Image moved here for mobile */}
               <div className="md:hidden order-3">
                 <div className="relative w-72 h-72 mx-auto">
                   <picture>
@@ -45,6 +46,7 @@ const Index = () => {
               </div>
             </div>
             
+            {/* Image Side - Hidden on mobile */}
             <div className="hidden md:block flex-1 md:w-1/3 relative">
               <div className="relative w-[400px] h-[400px] mx-auto">
                 <picture>
@@ -61,9 +63,6 @@ const Index = () => {
           </div>
         </div>
       </section>
-
-      {/* Timeline Section */}
-      <TimelineSection />
 
       {/* Results Section */}
       <ResultsSection />
