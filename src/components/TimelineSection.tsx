@@ -5,24 +5,29 @@ import { useEffect, useRef } from "react";
 interface TimelineStep {
   title: string;
   description: string;
+  emoji: string;
 }
 
 const steps: TimelineStep[] = [
   {
     title: "השארת פרטים",
     description: "מלא את הטופס עם פרטי ההתקשרות שלך ואחזור אליך בהקדם האפשרי",
+    emoji: "📝",
   },
   {
     title: "שיחת אבחון",
     description: "נבין יחד את האתגרים העסקיים שלך ונגדיר יעדים ברורים",
+    emoji: "🎯",
   },
   {
     title: "תכנית פעולה",
     description: "תקבל תובנות מעשיות ואסטרטגיה מותאמת אישית להגדלת המכירות",
+    emoji: "📈",
   },
   {
     title: "יישום והצלחה",
     description: "התחל ליישם את הכלים החדשים ותראה תוצאות מיידיות בעסק",
+    emoji: "🏆",
   },
 ];
 
@@ -70,7 +75,9 @@ const TimelineSection = () => {
                 </div>
               </div>
               <div className="flex-1 bg-white rounded-lg p-6 shadow-md hover:shadow-lg transition-shadow duration-300">
-                <h3 className="text-xl font-bold mb-2 text-primary">{step.title}</h3>
+                <h3 className="text-xl font-bold mb-2 text-primary">
+                  {step.emoji} {step.title}
+                </h3>
                 <p className="text-gray-600">{step.description}</p>
               </div>
             </div>

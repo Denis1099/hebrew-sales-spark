@@ -50,7 +50,7 @@ const ResultsSection = () => {
         });
       },
       {
-        threshold: 0.2, // Trigger when 20% of the section is visible
+        threshold: 0.2,
       }
     );
 
@@ -64,9 +64,9 @@ const ResultsSection = () => {
   return (
     <section ref={sectionRef} className="py-12">
       <div className="container mx-auto px-4">
-        <div className="grid md:grid-cols-3 gap-8 max-w-4xl mx-auto">
-          <div className="text-center p-8 rounded-2xl bg-white/80 backdrop-blur-sm shadow-lg">
-            <h3 className="text-2xl font-playfair font-bold text-primary mb-4">שביעות רצון<br />לקוחות</h3>
+        <div className="grid md:grid-cols-3 gap-8 max-w-5xl mx-auto">
+          <div className="text-center p-10 rounded-2xl bg-white/80 backdrop-blur-sm shadow-lg transform hover:scale-105 transition-transform duration-300">
+            <h3 className="text-2xl font-playfair font-bold text-primary mb-6">שביעות רצון<br />לקוחות</h3>
             <p className="text-4xl font-bold text-accent">
               <div className="flex flex-row-reverse items-center justify-center">
                 <span dir="ltr">
@@ -74,11 +74,11 @@ const ResultsSection = () => {
                 </span>
               </div>
             </p>
-            <p className="mt-2 text-gray-600">שביעות רצון מלאה</p>
+            <p className="mt-4 text-gray-600">שביעות רצון מלאה</p>
           </div>
 
-          <div className="text-center p-8 rounded-2xl bg-white/80 backdrop-blur-sm shadow-lg">
-            <h3 className="text-2xl font-playfair font-bold text-primary mb-4">שיפור באחוזי<br />סגירה</h3>
+          <div className="text-center p-10 rounded-2xl bg-white/80 backdrop-blur-sm shadow-lg transform hover:scale-105 transition-transform duration-300">
+            <h3 className="text-2xl font-playfair font-bold text-primary mb-6">שיפור באחוזי<br />סגירה</h3>
             <p className="text-4xl font-bold text-accent">
               <div className="flex flex-row-reverse items-center justify-center">
                 <span dir="ltr">
@@ -86,11 +86,11 @@ const ResultsSection = () => {
                 </span>
               </div>
             </p>
-            <p className="mt-2 text-gray-600">בממוצע אצל הלקוחות שלנו</p>
+            <p className="mt-4 text-gray-600">בממוצע אצל הלקוחות שלנו</p>
           </div>
           
-          <div className="text-center p-8 rounded-2xl bg-white/80 backdrop-blur-sm shadow-lg">
-            <h3 className="text-2xl font-playfair font-bold text-primary mb-4">הכנסות נוספות<br />ללקוחות</h3>
+          <div className="text-center p-10 rounded-2xl bg-white/80 backdrop-blur-sm shadow-lg transform hover:scale-105 transition-transform duration-300">
+            <h3 className="text-2xl font-playfair font-bold text-primary mb-6">הכנסות נוספות<br />ללקוחות</h3>
             <p className="text-4xl font-bold text-accent">
               <div className="flex flex-row-reverse items-center justify-center">
                 <span dir="ltr">
@@ -98,7 +98,7 @@ const ResultsSection = () => {
                 </span>
               </div>
             </p>
-            <p className="mt-2 text-gray-600">בממוצע בהכנסות העסק</p>
+            <p className="mt-4 text-gray-600">בממוצע בהכנסות העסק</p>
           </div>
         </div>
       </div>
