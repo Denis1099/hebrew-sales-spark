@@ -10,14 +10,14 @@ const Index = () => {
   return (
     <div className="min-h-screen bg-secondary/10 font-noto" dir="rtl">
       {/* Hero Section */}
-      <section className="h-screen flex items-start pt-20 relative bg-secondary/10">
+      <section className="h-screen flex items-start pt-16 relative bg-secondary/10">
         <div className="container mx-auto px-2 md:px-8">
           <div className="flex flex-col md:flex-row items-center gap-8">
-            <div className="flex-1 space-y-6 text-center">
-              <div className="text-accent text-xl font-bold order-1 mb-4">
+            <div className="flex-1 space-y-8 text-center">
+              <div className="text-accent text-xl font-bold order-1 mb-8">
                 ניר בנימין מציג:
               </div>
-              <h1 className="text-4xl md:text-5xl font-extrabold text-primary leading-tight order-2 mb-6">
+              <h1 className="text-4xl md:text-[3.5rem] font-extrabold text-primary leading-[1.2] order-2 mb-6">
                 רצים אל עבר אחוזי סגירה גבוהים יותר
               </h1>
               
@@ -34,10 +34,10 @@ const Index = () => {
                 </div>
               </div>
 
-              <h2 className="text-2xl font-extrabold order-4 mb-6">
+              <h2 className="text-2xl font-extrabold order-4 mb-10 max-w-3xl mx-auto">
                 בין אם אתם רק מתחילים או בעלי ניסיון רב שנים, שיטה זו תעניק לכם את הכלים לחדד את כישוריכם ולשפר את התוצאות שלכם.
               </h2>
-              <p className="text-lg text-text order-5 mb-8">
+              <p className="text-lg text-text order-5 mb-10 max-w-2xl mx-auto">
                 קבלו שיחת ייעוץ אישית חינם איתי – וגלו איך להכפיל את אחוזי הסגירה שלכם.
               </p>
               <div className="max-w-2xl mx-auto order-6 mb-12">
