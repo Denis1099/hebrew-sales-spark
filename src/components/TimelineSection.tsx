@@ -57,9 +57,9 @@ const TimelineSection = () => {
   return (
     <section className="py-16 bg-white/50">
       <div className="container mx-auto px-4">
-        <h2 className="text-3xl font-bold text-center mb-16 text-primary flex items-center justify-center gap-2">
+        <h2 className="text-3xl font-bold text-center mb-16 text-primary">
           <span>איך זה עובד</span>
-          <span>?</span>
+          <span className="mr-2">?</span>
         </h2>
         <div
           ref={timelineRef}
@@ -76,9 +76,9 @@ const TimelineSection = () => {
                 </div>
               </div>
               <div className="flex-1 bg-white rounded-lg p-6 shadow-md hover:shadow-lg transition-shadow duration-300">
-                <h3 className="text-xl font-bold mb-2 text-primary flex items-center justify-between">
+                <h3 className="text-xl font-bold mb-2 text-primary flex items-center gap-2">
                   <span>{step.title}</span>
-                  <span>{step.emoji}</span>
+                  <span className="text-2xl">{step.emoji}</span>
                 </h3>
                 <p className="text-gray-600 text-right">{step.description}</p>
               </div>
