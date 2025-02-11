@@ -45,7 +45,7 @@ const ResultsSection = () => {
           if (entry.isIntersecting && !hasAnimated) {
             setIsVisible(true);
             setHasAnimated(true);
-            observer.disconnect(); // Ensure animation only happens once
+            observer.disconnect();
           }
         });
       },
@@ -67,7 +67,7 @@ const ResultsSection = () => {
         <div className="grid md:grid-cols-3 gap-8 max-w-5xl mx-auto">
           <div className="text-center p-10 rounded-2xl bg-white/80 backdrop-blur-sm shadow-lg transform hover:scale-105 transition-transform duration-300">
             <h3 className="text-2xl font-playfair font-bold text-primary mb-6">שביעות רצון<br />לקוחות</h3>
-            <p className="text-4xl font-bold text-accent">
+            <p className="text-5xl font-bold text-accent">
               <div className="flex flex-row-reverse items-center justify-center">
                 <span dir="ltr">
                   <AnimatedNumber end={100} suffix="%" shouldAnimate={isVisible} />
@@ -79,7 +79,7 @@ const ResultsSection = () => {
 
           <div className="text-center p-10 rounded-2xl bg-white/80 backdrop-blur-sm shadow-lg transform hover:scale-105 transition-transform duration-300">
             <h3 className="text-2xl font-playfair font-bold text-primary mb-6">שיפור באחוזי<br />סגירה</h3>
-            <p className="text-4xl font-bold text-accent">
+            <p className="text-5xl font-bold text-accent">
               <div className="flex flex-row-reverse items-center justify-center">
                 <span dir="ltr">
                   <AnimatedNumber end={30} prefix="+" suffix="%" shouldAnimate={isVisible} />
@@ -91,7 +91,7 @@ const ResultsSection = () => {
           
           <div className="text-center p-10 rounded-2xl bg-white/80 backdrop-blur-sm shadow-lg transform hover:scale-105 transition-transform duration-300">
             <h3 className="text-2xl font-playfair font-bold text-primary mb-6">הכנסות נוספות<br />ללקוחות</h3>
-            <p className="text-4xl font-bold text-accent">
+            <p className="text-5xl font-bold text-accent">
               <div className="flex flex-row-reverse items-center justify-center">
                 <span dir="ltr">
                   <AnimatedNumber end={150} prefix="+" suffix="%" shouldAnimate={isVisible} />
@@ -107,3 +107,4 @@ const ResultsSection = () => {
 };
 
 export default ResultsSection;
+

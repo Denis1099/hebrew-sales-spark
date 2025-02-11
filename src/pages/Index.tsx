@@ -3,6 +3,7 @@ import { ConsultationForm } from "@/components/ConsultationForm";
 import ResultsSection from "@/components/ResultsSection";
 import TestimonialsSection from "@/components/TestimonialsSection";
 import TimelineSection from "@/components/TimelineSection";
+import FAQSection from "@/components/FAQSection";
 import { MessageCircleMore } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
@@ -66,9 +67,9 @@ const Index = () => {
       <TimelineSection />
 
       {/* Results Section */}
-      <section className="py-8 bg-white/5">
+      <section className="py-4 bg-secondary/5">
         <div className="container mx-auto px-4">
-          <h2 className="text-3xl font-bold text-center mb-8 text-primary">התוצאות מדברות בעד עצמן</h2>
+          <h2 className="text-3xl font-bold text-center mb-6 text-primary">התוצאות מדברות בעד עצמן</h2>
           <ResultsSection />
         </div>
       </section>
@@ -99,6 +100,9 @@ const Index = () => {
       {/* Testimonials Section */}
       <TestimonialsSection />
 
+      {/* FAQ Section */}
+      <FAQSection />
+
       {/* Closing Section */}
       <section className="py-20 bg-secondary/10">
         <div className="container mx-auto px-4">
@@ -128,3 +132,4 @@ const Index = () => {
 };
 
 export default Index;
+
