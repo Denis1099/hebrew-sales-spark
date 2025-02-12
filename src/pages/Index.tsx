@@ -66,7 +66,7 @@ const Index = () => {
       <TimelineSection />
 
       {/* Results Section - Reduced spacing and matched bg color */}
-      <section className="py-4 bg-secondary/10">
+      <section className="py-0 bg-white/50">
         <div className="container mx-auto px-4">
           <h2 className="text-3xl font-bold text-center mb-6 text-primary">התוצאות מדברות בעד עצמן</h2>
           <ResultsSection />

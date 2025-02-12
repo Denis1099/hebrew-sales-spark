@@ -65,7 +65,7 @@ const ResultsSection = () => {
     <section ref={sectionRef} className="py-12">
       <div className="container mx-auto px-4">
         <div className="grid md:grid-cols-3 gap-8 max-w-5xl mx-auto">
-          <div className="text-center p-10 rounded-2xl bg-white/80 backdrop-blur-sm shadow-lg transform hover:scale-105 transition-transform duration-300">
+          <div className="text-center p-10 rounded-2xl bg-white shadow-lg transform hover:scale-105 transition-transform duration-300">
             <h3 className="text-2xl font-playfair font-bold text-primary mb-6">שביעות רצון<br />לקוחות</h3>
             <p className="text-5xl font-bold text-accent">
               <div className="flex flex-row-reverse items-center justify-center">
@@ -77,7 +77,7 @@ const ResultsSection = () => {
             <p className="mt-4 text-gray-600">שביעות רצון מלאה</p>
           </div>
 
-          <div className="text-center p-10 rounded-2xl bg-white/80 backdrop-blur-sm shadow-lg transform hover:scale-105 transition-transform duration-300">
+          <div className="text-center p-10 rounded-2xl bg-white shadow-lg transform hover:scale-105 transition-transform duration-300">
             <h3 className="text-2xl font-playfair font-bold text-primary mb-6">שיפור באחוזי<br />סגירה</h3>
             <p className="text-5xl font-bold text-accent">
               <div className="flex flex-row-reverse items-center justify-center">
@@ -89,7 +89,7 @@ const ResultsSection = () => {
             <p className="mt-4 text-gray-600">בממוצע אצל הלקוחות שלנו</p>
           </div>
           
-          <div className="text-center p-10 rounded-2xl bg-white/80 backdrop-blur-sm shadow-lg transform hover:scale-105 transition-transform duration-300">
+          <div className="text-center p-10 rounded-2xl bg-white shadow-lg transform hover:scale-105 transition-transform duration-300">
             <h3 className="text-2xl font-playfair font-bold text-primary mb-6">הכנסות נוספות<br />ללקוחות</h3>
             <p className="text-5xl font-bold text-accent">
               <div className="flex flex-row-reverse items-center justify-center">
