@@ -10,10 +10,10 @@ const Index = () => {
   return (
     <div className="min-h-screen bg-secondary/10 font-noto" dir="rtl">
       {/* Hero Section */}
-      <section className="min-h-screen flex items-start pt-16 relative bg-secondary/10">
+      <section className="min-h-screen flex items-start pt-6 md:pt-16 relative bg-secondary/10">
         <div className="container mx-auto px-2 md:px-8">
           <div className="flex flex-col md:flex-row items-center gap-8">
-            <div className="flex-1 space-y-12 text-center">
+            <div className="flex-1 space-y-6 md:space-y-12 text-center">
               <div className="text-accent text-xl font-bold order-1 mb-4">
                 ניר בנימין מציג:
               </div>
@@ -74,7 +74,7 @@ const Index = () => {
       </section>
 
       {/* About Section */}
-      <section id="about-section" className="py-20 bg-secondary/10">
+      <section id="about-section" className="py-10 md:py-20 bg-secondary/10">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto space-y-8 text-center">
             <h2 className="text-3xl font-bold text-primary mb-12">קצת על עצמי</h2>
@@ -103,7 +103,7 @@ const Index = () => {
       <FAQSection />
 
       {/* Closing Section */}
-      <section className="py-20 bg-secondary/10">
+      <section className="py-10 md:py-20 bg-secondary/10">
         <div className="container mx-auto px-4">
           <div className="max-w-2xl mx-auto text-center space-y-8">
             <h2 className="text-3xl font-bold text-primary">הגיע הזמן להפסיק לפחד ממכירות ולהתחיל למכור יותר!</h2>

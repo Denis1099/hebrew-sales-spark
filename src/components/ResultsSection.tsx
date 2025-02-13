@@ -62,7 +62,7 @@ const ResultsSection = () => {
   }, [hasAnimated]);
 
   return (
-    <section ref={sectionRef} className="py-12">
+    <section ref={sectionRef} className="py-8 md:py-12">
       <div className="container mx-auto px-4">
         <div className="grid md:grid-cols-3 gap-8 max-w-5xl mx-auto">
           <div className="text-center p-10 rounded-2xl bg-white shadow-lg transform hover:scale-105 transition-transform duration-300">
