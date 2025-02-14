@@ -82,28 +82,28 @@ const Index = () => {
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto space-y-8 text-center" id="about-content">
             <h2 className="text-3xl font-bold text-primary mb-12">קצת על עצמי</h2>
-            <div className="space-y-6 text-lg visible">
-              <p className="opacity-0 animate-fade-in [animation-delay:200ms] [animation-play-state:paused] [.visible>&]:animate-running">
+            <div className="space-y-6 text-lg" id="about-content">
+              <p className="opacity-0 animate-fade-in [animation-delay:200ms]">
                 הרבה בעלי עסקים פותחים עסק מתוך תשוקה אמיתית לעזור לאנשים, אבל מהר מאוד מגלים שמכירות הן חלק בלתי נפרד מהמשוואה. בלי מכירות, אין עסק. ואם אתם מרגישים שאתם נרתעים ממכירות, חוששים משיחות טלפון, או פשוט לא מצליחים לסגור עסקאות – <strong>אתם לא לבד</strong> 🎯
               </p>
 
-              <p className="opacity-0 animate-fade-in [animation-delay:400ms] [animation-play-state:paused] [.visible>&]:animate-running">
+              <p className="opacity-0 animate-fade-in [animation-delay:400ms]">
                 שמי ניר בנימין, ואני עוזר לבעלי עסקים לפתח את "שריר המכירות" שלהם, כדי שיוכלו למכור יותר, לשפר את אחוזי ההמרה, וליהנות מהעסק שבנו 👋
               </p>
 
-              <p className="opacity-0 animate-fade-in [animation-delay:600ms] [animation-play-state:paused] [.visible>&]:animate-running">
+              <p className="opacity-0 animate-fade-in [animation-delay:600ms]">
                 גם אני הייתי פעם במקום הזה. בתור ילד ביישן ומופנם, חשבתי שמכירות זה תחום ששמור רק ל"אנשי מכירות" מוחצנים וכריזמטיים. אבל החלטתי לאתגר את עצמי. עברתי מסע של 5 שנים במוקדי מכירות שונים – למדתי את כל טכניקות המכירה, התנסיתי בשיחות עם מאות לקוחות, והוכחתי לעצמי שאפשר למכור גם בלי להיות "נוכל" או אגרסיבי. <strong>למדתי שאפשר למכור מתוך מקום של עזרה אמיתית</strong> 🌱
               </p>
 
-              <p className="opacity-0 animate-fade-in [animation-delay:800ms] [animation-play-state:paused] [.visible>&]:animate-running">
+              <p className="opacity-0 animate-fade-in [animation-delay:800ms]">
                 במהלך השנים, ראיתי שאני מצליח למכור, אבל תמיד הרגשתי שיש לי תקרת זכוכית. ידעתי שאני יכול יותר. האימונים שלי למרתון ריגה, וההתמדה שנדרשה כדי לסיים אותו, חיזקו אצלי את ההבנה הזו. הבנתי שאני חייב לצאת לדרך עצמאית ולעזור לאחרים לממש את הפוטנציאל המלא שלהם במכירות 🎯
               </p>
 
-              <p className="opacity-0 animate-fade-in [animation-delay:1000ms] [animation-play-state:paused] [.visible>&]:animate-running">
+              <p className="opacity-0 animate-fade-in [animation-delay:1000ms]">
                 הריצה לימדה אותי על הצבת מטרות, נחישות, סבלנות, והתמקדות בתהליך – ולא רק בתוצאה. את המנטליות הזו, של התמדה ושיפור מתמיד, אני מביא גם לאימון המכירות שלי 🏃‍♂️
               </p>
 
-              <p className="opacity-0 animate-fade-in [animation-delay:1200ms] [animation-play-state:paused] [.visible>&]:animate-running">
+              <p className="opacity-0 animate-fade-in [animation-delay:1200ms]">
                 יצאתי לדרך עצמאית מתוך תשוקה אמיתית לעזור לבעלי עסקים להתגבר על הפחד ממכירות, ללמוד למכור בדרך שמרגישה להם נכונה, ולהפוך את העסק שלהם להצלחה. <strong>אני מאמין שכל אחד יכול למכור</strong>, גם אם הוא ביישן או מופנם, ושהמפתח הוא בגישה הנכונה ובכלים הנכונים! 💪
               </p>
             </div>
