@@ -1,5 +1,7 @@
 
 import { TestimonialCard } from "./TestimonialCard";
+import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from "@/components/ui/carousel";
+import { ChevronLeft, ChevronRight, ChevronDown } from "lucide-react";
 
 const testimonials = [
   {
@@ -30,10 +32,26 @@ const TestimonialsSection = () => {
     <section className="py-14 md:py-20 bg-white/50">
       <div className="container mx-auto px-4">
         <h2 className="text-3xl font-bold text-primary text-center mb-12">מה אומרים עליי?</h2>
-        <div className="grid gap-8 max-w-5xl mx-auto">
-          {testimonials.map((testimonial, index) => (
-            <TestimonialCard key={index} {...testimonial} />
-          ))}
+        <div className="max-w-5xl mx-auto relative">
+          <Carousel
+            opts={{
+              align: "start",
+              loop: true,
+            }}
+            className="w-full"
+          >
+            <CarouselContent>
+              {testimonials.map((testimonial, index) => (
+                <CarouselItem key={index} className="md:basis-1/1 lg:basis-1/1">
+                  <TestimonialCard {...testimonial} />
+                </CarouselItem>
+              ))}
+            </CarouselContent>
+            <div className="hidden md:block">
+              <CarouselPrevious className="absolute -left-12 top-1/2 transform -translate-y-1/2" />
+              <CarouselNext className="absolute -right-12 top-1/2 transform -translate-y-1/2" />
+            </div>
+          </Carousel>
         </div>
       </div>
     </section>
