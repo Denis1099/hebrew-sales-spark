@@ -60,7 +60,7 @@ const Index = () => {
               </div>
             </div>
           </div>
-          <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce">
+          <div className="hidden md:block absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce">
             <ChevronDown className="w-8 h-8 text-primary" />
           </div>
         </div>
@@ -80,9 +80,9 @@ const Index = () => {
       {/* About Section */}
       <section id="about-section" className="py-10 md:py-20 bg-secondary/10">
         <div className="container mx-auto px-4">
-          <div className="max-w-4xl mx-auto space-y-8 text-center">
+          <div className="max-w-4xl mx-auto space-y-8 text-center" id="about-content">
             <h2 className="text-3xl font-bold text-primary mb-12">קצת על עצמי</h2>
-            <div className="space-y-6 text-lg">
+            <div className="space-y-6 text-lg visible">
               <p className="opacity-0 animate-fade-in [animation-delay:200ms] [animation-play-state:paused] [.visible>&]:animate-running">
                 הרבה בעלי עסקים פותחים עסק מתוך תשוקה אמיתית לעזור לאנשים, אבל מהר מאוד מגלים שמכירות הן חלק בלתי נפרד מהמשוואה. בלי מכירות, אין עסק. ואם אתם מרגישים שאתם נרתעים ממכירות, חוששים משיחות טלפון, או פשוט לא מצליחים לסגור עסקאות – <strong>אתם לא לבד</strong> 🎯
               </p>

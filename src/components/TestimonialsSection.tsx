@@ -1,7 +1,6 @@
 
 import { TestimonialCard } from "./TestimonialCard";
 import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from "@/components/ui/carousel";
-import { ChevronLeft, ChevronRight, ChevronDown } from "lucide-react";
 
 const testimonials = [
   {
@@ -42,8 +41,10 @@ const TestimonialsSection = () => {
           >
             <CarouselContent>
               {testimonials.map((testimonial, index) => (
-                <CarouselItem key={index} className="md:basis-1/1 lg:basis-1/1">
-                  <TestimonialCard {...testimonial} />
+                <CarouselItem key={index} className="basis-full">
+                  <div className="p-1">
+                    <TestimonialCard {...testimonial} />
+                  </div>
                 </CarouselItem>
               ))}
             </CarouselContent>
