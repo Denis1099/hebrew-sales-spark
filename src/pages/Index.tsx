@@ -16,10 +16,10 @@ const Index = () => {
         <div className="container mx-auto px-2 md:px-14">
           <div className="flex flex-col md:flex-row items-center gap-0">
             <div className="flex-1 space-y-6 md:space-y-12 text-center">
-              <div className="text-accent text-xl font-bold order-1 mb-4">
+              <div className="text-accent text-xl font-bold order-1 mb-4 opacity-0 animate-[fade-in_0.5s_ease-out_0.2s_forwards]">
                 ניר בנימין מציג:
               </div>
-              <h1 className="text-3xl md:text-[3.5rem] font-extrabold text-primary leading-[1.2] order-2 mb-8 px-4">
+              <h1 className="text-3xl md:text-[3.5rem] font-extrabold text-primary leading-[1.2] order-2 mb-8 px-4 opacity-0 animate-[fade-in_0.7s_ease-out_0.5s_forwards]">
                 רצים אל עבר אחוזי סגירה גבוהים יותר
               </h1>
               
@@ -36,18 +36,18 @@ const Index = () => {
                 </div>
               </div>
 
-              <h2 className="text-xl md:text-2xl font-extrabold order-4 mb-12 max-w-4xl mx-auto px-4">
+              <h2 className="text-xl md:text-2xl font-extrabold order-4 mb-12 max-w-4xl mx-auto px-4 opacity-0 animate-[fade-in_0.7s_ease-out_0.8s_forwards]">
                 בין אם אתם רק מתחילים או בעלי ניסיון רב שנים, שיטה זו תעניק לכם את הכלים לחדד את כישוריכם ולשפר את התוצאות שלכם.
               </h2>
-              <p className="text-base md:text-lg text-text order-5 mb-14 max-w-3xl mx-auto px-6">
+              <p className="text-base md:text-lg text-text order-5 mb-14 max-w-3xl mx-auto px-6 opacity-0 animate-[fade-in_0.7s_ease-out_1.1s_forwards]">
                 קבלו שיחת ייעוץ אישית חינם איתי – וגלו איך להכפיל את אחוזי הסגירה שלכם.
               </p>
-              <div className="max-w-2xl mx-auto order-6 mb-12 px-4">
+              <div className="max-w-2xl mx-auto order-6 mb-12 px-4 opacity-0 animate-[fade-in_0.7s_ease-out_1.4s_forwards]">
                 <ConsultationForm isCompact={true} />
               </div>
             </div>
             
-            <div className="hidden md:block flex-1 md:w-1/3 relative">
+            <div className="hidden md:block flex-1 md:w-1/3 relative opacity-0 animate-[fade-in_1s_ease-out_0.8s_forwards]">
               <div className="relative w-[400px] h-[400px] mx-auto">
                 <picture>
                   <source media="(min-width: 1024px)" srcSet="/lovable-uploads/sales-hero-desktop.webp" />
