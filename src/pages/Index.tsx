@@ -1,3 +1,4 @@
+
 import { ConsultationForm } from "@/components/ConsultationForm";
 import ResultsSection from "@/components/ResultsSection";
 import AboutSection from '@/components/AboutSection';
@@ -19,7 +20,7 @@ const Index = () => {
               <div className="text-accent text-xl font-bold order-1 mb-4 opacity-0 animate-[fade-in_0.5s_ease-out_0.2s_forwards]">
                 ניר בנימין מציג:
               </div>
-              <h1 className="text-3xl md:text-[3.5rem] font-extrabold text-primary leading-[1.2] order-2 mb-8 px-4 opacity-0 animate-[fade-in_0.7s_ease-out_0.5s_forwards]">
+              <h1 className="text-3xl md:text-[3.5rem] font-extrabold text-primary leading-[1.2] order-2 mb-8 px-4 opacity-0 origin-center animate-[scale-in_0.7s_ease-out_0.5s_forwards] hover:scale-105 transition-transform">
                 רצים אל עבר אחוזי סגירה גבוהים יותר
               </h1>
               
