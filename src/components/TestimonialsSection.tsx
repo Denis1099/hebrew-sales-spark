@@ -7,6 +7,7 @@ import {
   CarouselNext,
   CarouselPrevious,
 } from "@/components/ui/carousel";
+import { AspectRatio } from "@/components/ui/aspect-ratio";
 
 const testimonials = [
   {
@@ -84,14 +85,10 @@ const TestimonialsSection = () => {
           </Carousel>
         </div>
 
-        {/* YouTube Videos Section */}
-        <div className="mt-12">
-          <h3 className="text-2xl font-bold text-primary text-center mb-8">
-            צפו בסרטונים שלי
-          </h3>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-6xl mx-auto">
-            {youtubeVideos.map((video) => (
-              <div key={video.id} className="aspect-w-9 aspect-h-16 relative rounded-xl overflow-hidden shadow-lg">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-6xl mx-auto">
+          {youtubeVideos.map((video) => (
+            <div key={video.id} className="mx-auto w-[315px]">
+              <AspectRatio ratio={9/16} className="rounded-xl overflow-hidden shadow-lg">
                 <iframe
                   className="w-full h-full"
                   src={`https://www.youtube.com/embed/${video.id}`}
@@ -100,9 +97,9 @@ const TestimonialsSection = () => {
                   allowFullScreen
                   loading="lazy"
                 ></iframe>
-              </div>
-            ))}
-          </div>
+              </AspectRatio>
+            </div>
+          ))}
         </div>
       </div>
     </section>
