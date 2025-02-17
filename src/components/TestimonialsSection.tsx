@@ -1,3 +1,4 @@
+
 import { TestimonialCard } from "./TestimonialCard";
 import {
   Carousel,
@@ -31,6 +32,21 @@ const testimonials = [
   }
 ];
 
+const youtubeVideos = [
+  {
+    id: "f6qwLgjYohs",
+    title: "סרטון ראשון"
+  },
+  {
+    id: "vrclJHA2Iak",
+    title: "סרטון שני"
+  },
+  {
+    id: "Tm4A0GkPH0A",
+    title: "סרטון שלישי"
+  }
+];
+
 const TestimonialsSection = () => {
   return (
     <section dir="rtl" className="py-14 md:py-20 bg-white/50">
@@ -38,7 +54,7 @@ const TestimonialsSection = () => {
         <h2 className="text-3xl font-bold text-primary text-center mb-12">
           מה אומרים עליי?
         </h2>
-        <div className="max-w-4xl mx-auto relative">
+        <div className="max-w-4xl mx-auto relative mb-16">
           <Carousel
             dir="rtl"
             opts={{
@@ -66,6 +82,27 @@ const TestimonialsSection = () => {
               <CarouselNext className="hidden md:flex rotate-180" />
             </div>
           </Carousel>
+        </div>
+
+        {/* YouTube Videos Section */}
+        <div className="mt-12">
+          <h3 className="text-2xl font-bold text-primary text-center mb-8">
+            צפו בסרטונים שלי
+          </h3>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-6xl mx-auto">
+            {youtubeVideos.map((video) => (
+              <div key={video.id} className="aspect-w-9 aspect-h-16 relative rounded-xl overflow-hidden shadow-lg">
+                <iframe
+                  className="w-full h-full"
+                  src={`https://www.youtube.com/embed/${video.id}`}
+                  title={video.title}
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                  allowFullScreen
+                  loading="lazy"
+                ></iframe>
+              </div>
+            ))}
+          </div>
         </div>
       </div>
     </section>
