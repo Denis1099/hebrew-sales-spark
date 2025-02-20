@@ -71,7 +71,7 @@ const Index = () => {
       {/* Timeline Section */}
       <TimelineSection />
 
-      {/* Results Section */}
+      {/* Results Section - Reduced spacing and matched bg color */}
       <section className="py-0 bg-white/50">
         <div className="container mx-auto px-4">
           <h2 className="text-3xl font-bold text-center mb-6 text-primary">התוצאות מדברות בעד עצמן</h2>
@@ -100,10 +100,9 @@ const Index = () => {
           </div>
         </div>
       </section>
-
       {/* Credit Line */}
       <div className="text-center py-2 text-xs text-gray-500">
-        דף זה נוצר על ידי דניס פיירמן
+        נבנה ע"י דניס פיירמן
       </div>
 
       {/* WhatsApp Button */}
