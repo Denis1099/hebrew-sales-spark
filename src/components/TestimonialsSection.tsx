@@ -56,11 +56,11 @@ const TestimonialsSection = () => {
         <div className="max-w-4xl mx-auto relative mb-16">
           {/* Mobile swipe indicator */}
           <div className="md:hidden flex justify-between items-center absolute top-1/2 -translate-y-1/2 left-0 right-0 pointer-events-none px-4 z-10">
-            <div className="bg-white/80 p-2 rounded-full shadow-md backdrop-blur-sm">
-              <ChevronRight className="w-6 h-6 text-primary animate-pulse" />
+            <div className="bg-white/30 p-1.5 rounded-full shadow-sm backdrop-blur-[2px]">
+              <ChevronRight className="w-4 h-4 text-primary/70 animate-pulse" />
             </div>
-            <div className="bg-white/80 p-2 rounded-full shadow-md backdrop-blur-sm">
-              <ChevronLeft className="w-6 h-6 text-primary animate-pulse" />
+            <div className="bg-white/30 p-1.5 rounded-full shadow-sm backdrop-blur-[2px]">
+              <ChevronLeft className="w-4 h-4 text-primary/70 animate-pulse" />
             </div>
           </div>
           
