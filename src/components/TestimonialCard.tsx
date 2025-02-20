@@ -25,7 +25,7 @@ export const TestimonialCard = ({
               className="w-20 h-20 rounded-full object-cover border-2 border-primary/20"
             />
           </div>
-          <div className="mr-4 md:hidden">
+          <div className="mr-4 md:hidden flex flex-col justify-center min-h-[5rem]">
             <div className="font-bold text-primary">{name}</div>
             <div className="text-sm text-accent">
               {role}
@@ -33,7 +33,7 @@ export const TestimonialCard = ({
           </div>
         </div>
         <div className="flex-1 mt-4 md:mt-0">
-          <div className="text-lg text-gray-700 mb-4 md:mb-0">{content}</div>
+          <div className="text-lg text-gray-700 mb-4">{content}</div>
           <div className="hidden md:block">
             <div className="font-bold text-primary">{name}</div>
             <div className="text-sm text-accent">
