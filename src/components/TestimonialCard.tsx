@@ -17,7 +17,7 @@ export const TestimonialCard = ({
   return (
     <article dir="rtl" className="bg-white/80 backdrop-blur-sm p-6 rounded-2xl shadow-lg hover:shadow-xl transition-shadow duration-300">
       <div className="flex flex-col md:flex-row items-start">
-        <div className="flex items-start w-full md:block">
+        <div className="flex items-start w-full md:w-auto">
           <div className="shrink-0 md:ml-6">
             <img
               src={imageUrl}
