@@ -65,7 +65,7 @@ const ResultsSection = () => {
     <section ref={sectionRef} className="py-8 md:py-12">
       <div className="container mx-auto px-4">
         <div className="grid md:grid-cols-3 gap-8 max-w-5xl mx-auto">
-          <div className="text-center p-6 md:p-10 rounded-2xl bg-white shadow-lg transform hover:scale-105 transition-transform duration-300">
+          <div className="text-center p-4 md:p-10 rounded-2xl bg-white shadow-lg transform hover:scale-105 transition-transform duration-300 scale-90 md:scale-100">
             <h3 className="text-lg md:text-2xl font-playfair font-bold text-primary mb-6">שביעות רצון<br />לקוחות</h3>
             <p className="text-4xl md:text-5xl font-bold text-accent">
               <div className="flex flex-row-reverse items-center justify-center">
@@ -77,7 +77,7 @@ const ResultsSection = () => {
             <p className="mt-4 text-sm md:text-base text-gray-600">שביעות רצון מלאה</p>
           </div>
 
-          <div className="text-center p-6 md:p-10 rounded-2xl bg-white shadow-lg transform hover:scale-105 transition-transform duration-300">
+          <div className="text-center p-4 md:p-10 rounded-2xl bg-white shadow-lg transform hover:scale-105 transition-transform duration-300 scale-90 md:scale-100">
             <h3 className="text-lg md:text-2xl font-playfair font-bold text-primary mb-6">שיפור באחוזי<br />סגירה</h3>
             <p className="text-4xl md:text-5xl font-bold text-accent">
               <div className="flex flex-row-reverse items-center justify-center">
@@ -89,7 +89,7 @@ const ResultsSection = () => {
             <p className="mt-4 text-sm md:text-base text-gray-600">בממוצע אצל הלקוחות שלנו</p>
           </div>
           
-          <div className="text-center p-6 md:p-10 rounded-2xl bg-white shadow-lg transform hover:scale-105 transition-transform duration-300">
+          <div className="text-center p-4 md:p-10 rounded-2xl bg-white shadow-lg transform hover:scale-105 transition-transform duration-300 scale-90 md:scale-100">
             <h3 className="text-lg md:text-2xl font-playfair font-bold text-primary mb-6">הכנסות נוספות<br />ללקוחות</h3>
             <p className="text-4xl md:text-5xl font-bold text-accent">
               <div className="flex flex-row-reverse items-center justify-center">
