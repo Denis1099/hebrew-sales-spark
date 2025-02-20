@@ -15,15 +15,46 @@ export const ConsultationForm = ({ isCompact = false }: ConsultationFormProps) =
     phone: "",
     about: "",
   });
+  const [isSubmitting, setIsSubmitting] = useState(false);
   const { toast } = useToast();
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    toast({
-      title: "!תודה על פנייתך",
-      description: ".ניצור איתך קשר בהקדם",
-    });
-    setFormData({ name: "", phone: "", about: "" });
+    setIsSubmitting(true);
+
+    try {
+      // Validate phone number
+      const phoneRegex = /^[\d\-+\s]+$/;
+      if (!phoneRegex.test(formData.phone)) {
+        toast({
+          title: "שגיאה",
+          description: "מספר טלפון לא תקין",
+          variant: "destructive",
+        });
+        return;
+      }
+
+      // Here you would typically send the form data to your backend
+      // For now, we'll simulate a successful submission
+      await new Promise(resolve => setTimeout(resolve, 1000));
+
+      toast({
+        title: "!תודה על פנייתך",
+        description: ".ניצור איתך קשר בהקדם",
+      });
+      
+      // Reset form
+      setFormData({ name: "", phone: "", about: "" });
+      
+    } catch (error) {
+      toast({
+        title: "שגיאה",
+        description: ".אירעה שגיאה בשליחת הטופס. אנא נסה שוב",
+        variant: "destructive",
+      });
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   return (
@@ -36,6 +67,7 @@ export const ConsultationForm = ({ isCompact = false }: ConsultationFormProps) =
             value={formData.name}
             onChange={(e) => setFormData({ ...formData, name: e.target.value })}
             required
+            minLength={2}
             className="text-right rounded-lg bg-white/90 border-none shadow-sm h-14 text-lg px-6 focus:ring-2 focus:ring-primary/50 focus:shadow-lg transition-all"
           />
           <Input
@@ -61,8 +93,9 @@ export const ConsultationForm = ({ isCompact = false }: ConsultationFormProps) =
           <Button 
             type="submit" 
             className="h-14 px-10 rounded-lg bg-primary text-white hover:bg-primary/90 text-lg"
+            disabled={isSubmitting}
           >
-            בואו נדבר! 📥
+            {isSubmitting ? '...שולח' : 'בואו נדבר! 📥'}
           </Button>
           <Button 
             type="button"

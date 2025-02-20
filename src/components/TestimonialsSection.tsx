@@ -8,6 +8,7 @@ import {
   CarouselPrevious,
 } from "@/components/ui/carousel";
 import { AspectRatio } from "@/components/ui/aspect-ratio";
+import { ChevronLeft, ChevronRight } from "lucide-react";
 
 const testimonials = [
   {
@@ -53,6 +54,16 @@ const TestimonialsSection = () => {
           מה אומרים עליי?
         </h2>
         <div className="max-w-4xl mx-auto relative mb-16">
+          {/* Mobile swipe indicator */}
+          <div className="md:hidden flex justify-between items-center absolute top-1/2 -translate-y-1/2 left-0 right-0 pointer-events-none px-4 z-10">
+            <div className="bg-white/80 p-2 rounded-full shadow-md backdrop-blur-sm">
+              <ChevronRight className="w-6 h-6 text-primary animate-pulse" />
+            </div>
+            <div className="bg-white/80 p-2 rounded-full shadow-md backdrop-blur-sm">
+              <ChevronLeft className="w-6 h-6 text-primary animate-pulse" />
+            </div>
+          </div>
+          
           <Carousel
             dir="rtl"
             opts={{
