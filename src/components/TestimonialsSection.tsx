@@ -8,7 +8,6 @@ import {
   CarouselPrevious,
 } from "@/components/ui/carousel";
 import { AspectRatio } from "@/components/ui/aspect-ratio";
-import { ChevronLeft, ChevronRight } from "lucide-react";
 
 const testimonials = [
   {
@@ -54,14 +53,11 @@ const TestimonialsSection = () => {
           מה אומרים עליי?
         </h2>
         <div className="max-w-4xl mx-auto relative mb-16">
-          {/* Mobile swipe indicator */}
-          <div className="md:hidden flex justify-between items-center absolute top-1/2 -translate-y-1/2 left-0 right-0 pointer-events-none px-4 z-10">
-            <div className="bg-white/30 p-1.5 rounded-full shadow-sm backdrop-blur-[2px]">
-              <ChevronRight className="w-4 h-4 text-primary/70 animate-pulse" />
-            </div>
-            <div className="bg-white/30 p-1.5 rounded-full shadow-sm backdrop-blur-[2px]">
-              <ChevronLeft className="w-4 h-4 text-primary/70 animate-pulse" />
-            </div>
+          {/* Mobile swipe indicator dots */}
+          <div className="md:hidden absolute -bottom-6 left-1/2 transform -translate-x-1/2 flex gap-1.5 z-10">
+            <div className="w-1.5 h-1.5 bg-primary/30 rounded-full animate-[pulse_2s_ease-in-out_0s_infinite]"></div>
+            <div className="w-1.5 h-1.5 bg-primary/30 rounded-full animate-[pulse_2s_ease-in-out_0.5s_infinite]"></div>
+            <div className="w-1.5 h-1.5 bg-primary/30 rounded-full animate-[pulse_2s_ease-in-out_1s_infinite]"></div>
           </div>
           
           <Carousel
@@ -71,13 +67,18 @@ const TestimonialsSection = () => {
               loop: true,
               direction: "rtl",
               skipSnaps: false,
-              dragFree: false
+              dragFree: true, // Enable smoother dragging
+              inViewThreshold: 0.7, // Improve snap behavior
+              containScroll: "trimSnaps" // Improve edge behavior
             }}
-            className="w-full"
+            className="w-full touch-pan-y" // Improve touch handling
           >
             <CarouselContent className="-mr-4 ml-0">
               {testimonials.map((testimonial, index) => (
-                <CarouselItem key={index} className="pr-4 pl-0 basis-full">
+                <CarouselItem 
+                  key={index} 
+                  className="pr-4 pl-0 basis-full transition-transform duration-300 ease-out"
+                >
                   <div className="p-1">
                     <TestimonialCard {...testimonial} />
                   </div>
