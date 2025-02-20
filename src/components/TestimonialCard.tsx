@@ -3,7 +3,6 @@ import React from 'react';
 interface TestimonialCardProps {
   name: string;
   role: string;
-  company: string;
   content: string;
   imageUrl: string;
 }
@@ -11,7 +10,6 @@ interface TestimonialCardProps {
 export const TestimonialCard = ({
   name,
   role,
-  company,
   content,
   imageUrl,
 }: TestimonialCardProps) => {
@@ -30,7 +28,7 @@ export const TestimonialCard = ({
           <div>
             <div className="font-bold text-primary">{name}</div>
             <div className="text-sm text-accent">
-              {role}, {company}
+              {role}
             </div>
           </div>
         </div>
