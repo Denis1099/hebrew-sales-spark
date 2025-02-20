@@ -82,9 +82,9 @@ const TestimonialsSection = () => {
           </Carousel>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-6xl mx-auto">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-4xl mx-auto">
           {youtubeVideos.map((video) => (
-            <div key={video.id} className="mx-auto w-[315px]">
+            <div key={video.id} className="mx-auto w-[280px]">
               <AspectRatio ratio={9/16} className="rounded-xl overflow-hidden shadow-lg">
                 <iframe
                   className="w-full h-full"

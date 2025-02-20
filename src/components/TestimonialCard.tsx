@@ -1,3 +1,4 @@
+
 import React from 'react';
 
 interface TestimonialCardProps {
@@ -23,9 +24,15 @@ export const TestimonialCard = ({
             className="w-20 h-20 rounded-full object-cover border-2 border-primary/20"
           />
         </div>
-        <div className="flex-1 space-y-4 mt-6 md:mt-0">
-          <div className="text-lg text-gray-700">{content}</div>
-          <div>
+        <div className="flex-1">
+          <div className="mb-4 md:hidden">
+            <div className="font-bold text-primary">{name}</div>
+            <div className="text-sm text-accent">
+              {role}
+            </div>
+          </div>
+          <div className="text-lg text-gray-700 mb-4 md:mb-0">{content}</div>
+          <div className="hidden md:block">
             <div className="font-bold text-primary">{name}</div>
             <div className="text-sm text-accent">
               {role}
