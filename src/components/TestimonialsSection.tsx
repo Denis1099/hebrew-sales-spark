@@ -1,3 +1,4 @@
+
 import { TestimonialCard } from "./TestimonialCard";
 import {
   Carousel,
@@ -5,6 +6,7 @@ import {
   CarouselItem,
 } from "@/components/ui/carousel";
 import { useCallback, useState, useEffect } from "react";
+import { AspectRatio } from "@/components/ui/aspect-ratio";
 
 const testimonials = [
   {
@@ -24,6 +26,21 @@ const testimonials = [
     role: "מאמן מנטלי",
     content: '"אחרי שהעלתי את הקמפיין הגעתי לסדנה של ניר ולמדתי איך למנוע את ההתנגדויות מראש במקום שיבואו לי בסוף ופתאום אני סוגר יותר עסקאות"',
     imageUrl: "/lovable-uploads/idoovadya.webp"
+  }
+];
+
+const youtubeVideos = [
+  {
+    id: "E7OXxdBHqVE",
+    title: "סרטון עדות 1"
+  },
+  {
+    id: "Xn87K8xwWnE",
+    title: "סרטון עדות 2"
+  },
+  {
+    id: "yBDZJYt5qOo",
+    title: "סרטון עדות 3"
   }
 ];
 
@@ -133,6 +150,27 @@ export function TestimonialsSection() {
                 onClick={() => api?.scrollTo(index)}
                 aria-label={`עבור לדף ${index + 1}`}
               />
+            ))}
+          </div>
+        </div>
+
+        {/* YouTube Videos Section */}
+        <div className="mt-16">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-4xl mx-auto">
+            {youtubeVideos.map((video) => (
+              <div key={video.id} className="w-[252px] mx-auto">
+                <AspectRatio ratio={9/16} className="rounded-xl overflow-hidden shadow-lg">
+                  <iframe
+                    width="252"
+                    height="448"
+                    src={`https://www.youtube.com/embed/${video.id}?rel=0`}
+                    title={video.title}
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allowFullScreen
+                    loading="lazy"
+                  ></iframe>
+                </AspectRatio>
+              </div>
             ))}
           </div>
         </div>
