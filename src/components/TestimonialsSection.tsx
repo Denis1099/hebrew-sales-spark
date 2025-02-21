@@ -69,7 +69,7 @@ export function TestimonialsSection() {
   return (
     <section className="py-12 bg-gradient-to-b from-slate-50 to-slate-100">
       <div className="container mx-auto max-w-6xl px-4 relative">
-        <h2 className="text-center text-3xl font-bold mb-12 text-primary">התלמידים שלנו מספרים</h2>
+        <h2 className="text-center text-3xl font-bold mb-12 text-primary">מה הם אומרים:</h2>
         
         {/* Left arrow - outward facing */}
         <div className="absolute left-0 lg:-left-6 top-1/2 mt-6 transform -translate-y-1/2 hidden md:block z-10">
