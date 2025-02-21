@@ -8,6 +8,7 @@ import {
   CarouselPrevious,
 } from "@/components/ui/carousel";
 import { AspectRatio } from "@/components/ui/aspect-ratio";
+import { useCallback, useState } from "react";
 
 const testimonials = [
   {
@@ -46,6 +47,13 @@ const youtubeVideos = [
 ];
 
 const TestimonialsSection = () => {
+  const [currentSlide, setCurrentSlide] = useState(0);
+
+  const handleSelect = useCallback((api: any) => {
+    if (!api) return;
+    setCurrentSlide(api.selectedScrollSnap());
+  }, []);
+
   return (
     <section dir="rtl" className="py-14 md:py-20 bg-white/50">
       <div className="container mx-auto px-4">
@@ -55,9 +63,14 @@ const TestimonialsSection = () => {
         <div className="max-w-4xl mx-auto relative mb-16">
           {/* Mobile swipe indicator dots */}
           <div className="md:hidden absolute -bottom-3 left-1/2 transform -translate-x-1/2 flex gap-2 z-10">
-            <div className="w-2 h-2 bg-primary rounded-full animate-[pulse_1.5s_ease-in-out_0s_infinite] shadow-sm"></div>
-            <div className="w-2 h-2 bg-primary rounded-full animate-[pulse_1.5s_ease-in-out_0.5s_infinite] shadow-sm"></div>
-            <div className="w-2 h-2 bg-primary rounded-full animate-[pulse_1.5s_ease-in-out_1s_infinite] shadow-sm"></div>
+            {testimonials.map((_, index) => (
+              <div 
+                key={index}
+                className={`w-2 h-2 rounded-full shadow-sm transition-colors duration-300 ${
+                  currentSlide === index ? 'bg-primary' : 'bg-primary/30'
+                }`}
+              ></div>
+            ))}
           </div>
           
           <Carousel
@@ -66,13 +79,14 @@ const TestimonialsSection = () => {
               align: "center",
               loop: true,
               direction: "rtl",
-              skipSnaps: false,
-              dragFree: true,
-              inViewThreshold: 0.7,
+              skipSnaps: true, // Don't skip snaps
+              dragFree: false, // Disable free dragging
+              inViewThreshold: 1, // Ensure full snap
               containScroll: "trimSnaps",
-              duration: 2000 // Use duration instead of speed (in milliseconds)
+              duration: 500 // Faster transition for better snap feel
             }}
             className="w-full touch-pan-y"
+            onSelect={handleSelect}
           >
             <CarouselContent className="-mr-4 ml-0">
               {testimonials.map((testimonial, index) => (
