@@ -54,10 +54,10 @@ const TestimonialsSection = () => {
         </h2>
         <div className="max-w-4xl mx-auto relative mb-16">
           {/* Mobile swipe indicator dots */}
-          <div className="md:hidden absolute -bottom-6 left-1/2 transform -translate-x-1/2 flex gap-1.5 z-10">
-            <div className="w-1.5 h-1.5 bg-primary/30 rounded-full animate-[pulse_2s_ease-in-out_0s_infinite]"></div>
-            <div className="w-1.5 h-1.5 bg-primary/30 rounded-full animate-[pulse_2s_ease-in-out_0.5s_infinite]"></div>
-            <div className="w-1.5 h-1.5 bg-primary/30 rounded-full animate-[pulse_2s_ease-in-out_1s_infinite]"></div>
+          <div className="md:hidden absolute -bottom-3 left-1/2 transform -translate-x-1/2 flex gap-2 z-10">
+            <div className="w-2 h-2 bg-primary rounded-full animate-[pulse_1.5s_ease-in-out_0s_infinite] shadow-sm"></div>
+            <div className="w-2 h-2 bg-primary rounded-full animate-[pulse_1.5s_ease-in-out_0.5s_infinite] shadow-sm"></div>
+            <div className="w-2 h-2 bg-primary rounded-full animate-[pulse_1.5s_ease-in-out_1s_infinite] shadow-sm"></div>
           </div>
           
           <Carousel
@@ -67,17 +67,18 @@ const TestimonialsSection = () => {
               loop: true,
               direction: "rtl",
               skipSnaps: false,
-              dragFree: true, // Enable smoother dragging
-              inViewThreshold: 0.7, // Improve snap behavior
-              containScroll: "trimSnaps" // Improve edge behavior
+              dragFree: true,
+              inViewThreshold: 0.7,
+              containScroll: "trimSnaps",
+              speed: 10 // Slow down the animation (higher number = slower)
             }}
-            className="w-full touch-pan-y" // Improve touch handling
+            className="w-full touch-pan-y"
           >
             <CarouselContent className="-mr-4 ml-0">
               {testimonials.map((testimonial, index) => (
                 <CarouselItem 
                   key={index} 
-                  className="pr-4 pl-0 basis-full transition-transform duration-300 ease-out"
+                  className="pr-4 pl-0 basis-full transition-transform duration-500 ease-out" // Increased duration from 300 to 500
                 >
                   <div className="p-1">
                     <TestimonialCard {...testimonial} />
