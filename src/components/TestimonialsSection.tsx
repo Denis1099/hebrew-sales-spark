@@ -70,7 +70,7 @@ const TestimonialsSection = () => {
               dragFree: true,
               inViewThreshold: 0.7,
               containScroll: "trimSnaps",
-              speed: 10 // Slow down the animation (higher number = slower)
+              duration: 2000 // Use duration instead of speed (in milliseconds)
             }}
             className="w-full touch-pan-y"
           >
@@ -78,7 +78,7 @@ const TestimonialsSection = () => {
               {testimonials.map((testimonial, index) => (
                 <CarouselItem 
                   key={index} 
-                  className="pr-4 pl-0 basis-full transition-transform duration-500 ease-out" // Increased duration from 300 to 500
+                  className="pr-4 pl-0 basis-full transition-transform duration-500 ease-out"
                 >
                   <div className="p-1">
                     <TestimonialCard {...testimonial} />
