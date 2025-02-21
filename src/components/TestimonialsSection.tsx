@@ -51,7 +51,14 @@ const TestimonialsSection = () => {
 
   const handleSelect = useCallback((api: any) => {
     if (!api) return;
-    setCurrentSlide(api.selectedScrollSnap());
+    
+    // Get the normalized index considering the loop
+    const selectedIndex = api.selectedScrollSnap();
+    const count = api.scrollSnapList().length;
+    
+    // Normalize the index to match our testimonials array length
+    const normalizedIndex = ((selectedIndex % count) + count) % count;
+    setCurrentSlide(normalizedIndex);
   }, []);
 
   return (
@@ -76,14 +83,14 @@ const TestimonialsSection = () => {
           <Carousel
             dir="rtl"
             opts={{
-              align: "center",
+              align: "start",
               loop: true,
               direction: "rtl",
-              skipSnaps: true, // Don't skip snaps
-              dragFree: false, // Disable free dragging
-              inViewThreshold: 1, // Ensure full snap
+              skipSnaps: false,
+              dragFree: false,
               containScroll: "trimSnaps",
-              duration: 500 // Faster transition for better snap feel
+              duration: 500,
+              startIndex: 0
             }}
             className="w-full touch-pan-y"
             onSelect={handleSelect}
@@ -92,7 +99,7 @@ const TestimonialsSection = () => {
               {testimonials.map((testimonial, index) => (
                 <CarouselItem 
                   key={index} 
-                  className="pr-4 pl-0 basis-full transition-transform duration-500 ease-out"
+                  className="pr-4 pl-0 basis-full transition-all duration-500 ease-in-out"
                 >
                   <div className="p-1">
                     <TestimonialCard {...testimonial} />
