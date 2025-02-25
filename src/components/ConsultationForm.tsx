@@ -21,16 +21,17 @@ export const ConsultationForm = ({ isCompact = false }: ConsultationFormProps) =
   const submitToGoogleForms = async (data: typeof formData) => {
     const formUrl = "https://docs.google.com/forms/d/e/1FAIpQLScZHnopQK8pSiNhG0EfFXHoN1eIggetIPnstUld4oCPhl4BQg/formResponse";
     
-    const formData = new URLSearchParams();
-    formData.append("entry.2111437399", data.name);
-    formData.append("entry.297078173", data.phone);
-    formData.append("entry.542479645", data.about);
+    // If it's the compact form and no "about" is provided, set it to "טופס קצר"
+    const submissionData = new URLSearchParams();
+    submissionData.append("entry.2111437399", data.name);
+    submissionData.append("entry.297078173", data.phone);
+    submissionData.append("entry.542479645", isCompact ? "טופס קצר" : data.about);
 
     // Using no-cors mode as Google Forms doesn't support CORS
     await fetch(formUrl, {
       method: "POST",
       mode: "no-cors",
-      body: formData,
+      body: submissionData,
       headers: {
         "Content-Type": "application/x-www-form-urlencoded",
       },
@@ -50,6 +51,7 @@ export const ConsultationForm = ({ isCompact = false }: ConsultationFormProps) =
           description: "מספר טלפון לא תקין",
           variant: "destructive",
         });
+        setIsSubmitting(false);
         return;
       }
 
