@@ -18,6 +18,26 @@ export const ConsultationForm = ({ isCompact = false }: ConsultationFormProps) =
   const [isSubmitting, setIsSubmitting] = useState(false);
   const { toast } = useToast();
 
+  const submitToGoogleForms = async (data: typeof formData) => {
+    const formUrl = "https://docs.google.com/forms/d/e/1FAIpQLScZHnopQK8pSiNhG0EfFXHoN1eIggetIPnstUld4oCPhl4BQg/formResponse";
+    
+    // If it's the compact form and no "about" is provided, set it to "טופס קצר"
+    const submissionData = new URLSearchParams();
+    submissionData.append("entry.2111437399", data.name);
+    submissionData.append("entry.297078173", data.phone);
+    submissionData.append("entry.542479645", isCompact ? "טופס קצר" : data.about);
+
+    // Using no-cors mode as Google Forms doesn't support CORS
+    await fetch(formUrl, {
+      method: "POST",
+      mode: "no-cors",
+      body: submissionData,
+      headers: {
+        "Content-Type": "application/x-www-form-urlencoded",
+      },
+    });
+  };
+
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setIsSubmitting(true);
@@ -31,13 +51,14 @@ export const ConsultationForm = ({ isCompact = false }: ConsultationFormProps) =
           description: "מספר טלפון לא תקין",
           variant: "destructive",
         });
+        setIsSubmitting(false);
         return;
       }
 
-      // Here you would typically send the form data to your backend
-      // For now, we'll simulate a successful submission
-      await new Promise(resolve => setTimeout(resolve, 1000));
+      // Submit to Google Forms
+      await submitToGoogleForms(formData);
 
+      // Show success message
       toast({
         title: "!תודה על פנייתך",
         description: ".ניצור איתך קשר בהקדם",
@@ -47,6 +68,8 @@ export const ConsultationForm = ({ isCompact = false }: ConsultationFormProps) =
       setFormData({ name: "", phone: "", about: "" });
       
     } catch (error) {
+      // Note: due to no-cors mode, we won't actually get errors from Google Forms
+      // This catch block is mainly for network errors
       toast({
         title: "שגיאה",
         description: ".אירעה שגיאה בשליחת הטופס. אנא נסה שוב",

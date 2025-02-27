@@ -1,4 +1,3 @@
-
 import { TestimonialCard } from "./TestimonialCard";
 import {
   Carousel,
@@ -31,16 +30,16 @@ const testimonials = [
 
 const youtubeVideos = [
   {
-    id: "E7OXxdBHqVE",
-    title: "סרטון עדות 1"
+    id: "Tm4A0GkPH0A",
+    title: "המלצה של עוז"
   },
   {
-    id: "Xn87K8xwWnE",
-    title: "סרטון עדות 2"
+    id: "vrclJHA2Iak",
+    title: "המלצה של גיל"
   },
   {
-    id: "yBDZJYt5qOo",
-    title: "סרטון עדות 3"
+    id: "f6qwLgjYohs",
+    title: "המלצה של אסף"
   }
 ];
 
@@ -48,7 +47,6 @@ export function TestimonialsSection() {
   const [currentSlide, setCurrentSlide] = useState(0);
   const [api, setApi] = useState(null);
   
-  // Update current slide whenever carousel changes
   useEffect(() => {
     if (!api) return;
     
@@ -61,7 +59,6 @@ export function TestimonialsSection() {
     api.on('select', onSelect);
     api.on('settle', onSelect);
     
-    // Initial selection
     onSelect();
     
     return () => {
@@ -70,16 +67,13 @@ export function TestimonialsSection() {
     };
   }, [api]);
 
-  // Fixed navigation handlers for RTL mode
   const goToNext = useCallback(() => {
     if (!api) return;
-    // In RTL mode, "next" means moving visually right but programmatically left
     api.scrollPrev();
   }, [api]);
   
   const goToPrev = useCallback(() => {
     if (!api) return;
-    // In RTL mode, "prev" means moving visually left but programmatically right
     api.scrollNext();
   }, [api]);
 
@@ -88,7 +82,6 @@ export function TestimonialsSection() {
       <div className="container mx-auto max-w-6xl px-4 relative">
         <h2 className="text-center text-3xl font-bold mb-12 text-primary">מה הם אומרים:</h2>
         
-        {/* Left arrow - outward facing */}
         <div className="absolute left-0 lg:-left-6 top-1/2 mt-6 transform -translate-y-1/2 hidden md:block z-10">
           <button 
             onClick={goToPrev}
@@ -101,7 +94,6 @@ export function TestimonialsSection() {
           </button>
         </div>
         
-        {/* Right arrow - outward facing */}
         <div className="absolute right-0 lg:-right-6 top-1/2 mt-6 transform -translate-y-1/2 hidden md:block z-10">
           <button 
             onClick={goToNext}
@@ -139,7 +131,6 @@ export function TestimonialsSection() {
             </CarouselContent>
           </Carousel>
           
-          {/* Indicator dots */}
           <div className="flex justify-center gap-2 mt-6">
             {testimonials.map((_, index) => (
               <button
@@ -154,7 +145,6 @@ export function TestimonialsSection() {
           </div>
         </div>
 
-        {/* YouTube Videos Section */}
         <div className="mt-16">
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-4xl mx-auto">
             {youtubeVideos.map((video) => (
@@ -163,7 +153,7 @@ export function TestimonialsSection() {
                   <iframe
                     width="252"
                     height="448"
-                    src={`https://www.youtube.com/embed/${video.id}?rel=0`}
+                    src={`https://www.youtube.com/embed/${video.id}?rel=0&modestbranding=1&playsinline=1&enablejsapi=1`}
                     title={video.title}
                     allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                     allowFullScreen
